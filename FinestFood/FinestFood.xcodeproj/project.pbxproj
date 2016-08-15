@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BC1AE5781D61D93400620531 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1AE5771D61D93400620531 /* AppDelegate.swift */; };
+		BC1AE57A1D61D93400620531 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1AE5791D61D93400620531 /* ViewController.swift */; };
+		BC1AE57D1D61D93400620531 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1AE57B1D61D93400620531 /* Main.storyboard */; };
+		BC1AE57F1D61D93400620531 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BC1AE57E1D61D93400620531 /* Assets.xcassets */; };
+		BC1AE5821D61D93400620531 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BC1AE5801D61D93400620531 /* LaunchScreen.storyboard */; };
+		BC1AE58D1D61D93500620531 /* FinestFoodTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1AE58C1D61D93500620531 /* FinestFoodTests.swift */; };
+		BC1AE5981D61D93500620531 /* FinestFoodUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC1AE5971D61D93500620531 /* FinestFoodUITests.swift */; };
+		BF94887BC4B172C1983B1703 /* Pods_FinestFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6FC5548DE928ADA561DF06B /* Pods_FinestFood.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BC1AE5891D61D93500620531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC1AE56C1D61D93400620531 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC1AE5731D61D93400620531;
+			remoteInfo = FinestFood;
+		};
+		BC1AE5941D61D93500620531 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BC1AE56C1D61D93400620531 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BC1AE5731D61D93400620531;
+			remoteInfo = FinestFood;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5C577F1872D7854C05E757F1 /* Pods-FinestFood.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinestFood.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FinestFood/Pods-FinestFood.debug.xcconfig"; sourceTree = "<group>"; };
+		B6FC5548DE928ADA561DF06B /* Pods_FinestFood.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FinestFood.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC1AE5741D61D93400620531 /* FinestFood.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinestFood.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC1AE5771D61D93400620531 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BC1AE5791D61D93400620531 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BC1AE57C1D61D93400620531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BC1AE57E1D61D93400620531 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BC1AE5811D61D93400620531 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BC1AE5831D61D93500620531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC1AE5881D61D93500620531 /* FinestFoodTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinestFoodTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC1AE58C1D61D93500620531 /* FinestFoodTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinestFoodTests.swift; sourceTree = "<group>"; };
+		BC1AE58E1D61D93500620531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BC1AE5931D61D93500620531 /* FinestFoodUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinestFoodUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC1AE5971D61D93500620531 /* FinestFoodUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinestFoodUITests.swift; sourceTree = "<group>"; };
+		BC1AE5991D61D93500620531 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FD95A70C8024870AFE5A5A4F /* Pods-FinestFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinestFood.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinestFood/Pods-FinestFood.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BC1AE5711D61D93400620531 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BF94887BC4B172C1983B1703 /* Pods_FinestFood.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC1AE5851D61D93500620531 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC1AE5901D61D93500620531 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		731B7B49A4F2B92879988788 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5C577F1872D7854C05E757F1 /* Pods-FinestFood.debug.xcconfig */,
+				FD95A70C8024870AFE5A5A4F /* Pods-FinestFood.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		A6D337AD440712115F510D17 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B6FC5548DE928ADA561DF06B /* Pods_FinestFood.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BC1AE56B1D61D93400620531 = {
+			isa = PBXGroup;
+			children = (
+				BC1AE5761D61D93400620531 /* FinestFood */,
+				BC1AE58B1D61D93500620531 /* FinestFoodTests */,
+				BC1AE5961D61D93500620531 /* FinestFoodUITests */,
+				BC1AE5751D61D93400620531 /* Products */,
+				731B7B49A4F2B92879988788 /* Pods */,
+				A6D337AD440712115F510D17 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		BC1AE5751D61D93400620531 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BC1AE5741D61D93400620531 /* FinestFood.app */,
+				BC1AE5881D61D93500620531 /* FinestFoodTests.xctest */,
+				BC1AE5931D61D93500620531 /* FinestFoodUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BC1AE5761D61D93400620531 /* FinestFood */ = {
+			isa = PBXGroup;
+			children = (
+				BC1AE5771D61D93400620531 /* AppDelegate.swift */,
+				BC1AE5791D61D93400620531 /* ViewController.swift */,
+				BC1AE57B1D61D93400620531 /* Main.storyboard */,
+				BC1AE57E1D61D93400620531 /* Assets.xcassets */,
+				BC1AE5801D61D93400620531 /* LaunchScreen.storyboard */,
+				BC1AE5831D61D93500620531 /* Info.plist */,
+			);
+			path = FinestFood;
+			sourceTree = "<group>";
+		};
+		BC1AE58B1D61D93500620531 /* FinestFoodTests */ = {
+			isa = PBXGroup;
+			children = (
+				BC1AE58C1D61D93500620531 /* FinestFoodTests.swift */,
+				BC1AE58E1D61D93500620531 /* Info.plist */,
+			);
+			path = FinestFoodTests;
+			sourceTree = "<group>";
+		};
+		BC1AE5961D61D93500620531 /* FinestFoodUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BC1AE5971D61D93500620531 /* FinestFoodUITests.swift */,
+				BC1AE5991D61D93500620531 /* Info.plist */,
+			);
+			path = FinestFoodUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BC1AE5731D61D93400620531 /* FinestFood */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC1AE59C1D61D93500620531 /* Build configuration list for PBXNativeTarget "FinestFood" */;
+			buildPhases = (
+				8C8A4AA1D55FF70CAD241962 /* [CP] Check Pods Manifest.lock */,
+				BC1AE5701D61D93400620531 /* Sources */,
+				BC1AE5711D61D93400620531 /* Frameworks */,
+				BC1AE5721D61D93400620531 /* Resources */,
+				4ADB78C62981298CAA0F2983 /* [CP] Embed Pods Frameworks */,
+				599EB9543FFB315755193498 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FinestFood;
+			productName = FinestFood;
+			productReference = BC1AE5741D61D93400620531 /* FinestFood.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BC1AE5871D61D93500620531 /* FinestFoodTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC1AE59F1D61D93500620531 /* Build configuration list for PBXNativeTarget "FinestFoodTests" */;
+			buildPhases = (
+				BC1AE5841D61D93500620531 /* Sources */,
+				BC1AE5851D61D93500620531 /* Frameworks */,
+				BC1AE5861D61D93500620531 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC1AE58A1D61D93500620531 /* PBXTargetDependency */,
+			);
+			name = FinestFoodTests;
+			productName = FinestFoodTests;
+			productReference = BC1AE5881D61D93500620531 /* FinestFoodTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BC1AE5921D61D93500620531 /* FinestFoodUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BC1AE5A21D61D93500620531 /* Build configuration list for PBXNativeTarget "FinestFoodUITests" */;
+			buildPhases = (
+				BC1AE58F1D61D93500620531 /* Sources */,
+				BC1AE5901D61D93500620531 /* Frameworks */,
+				BC1AE5911D61D93500620531 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BC1AE5951D61D93500620531 /* PBXTargetDependency */,
+			);
+			name = FinestFoodUITests;
+			productName = FinestFoodUITests;
+			productReference = BC1AE5931D61D93500620531 /* FinestFoodUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BC1AE56C1D61D93400620531 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = qianfeng;
+				TargetAttributes = {
+					BC1AE5731D61D93400620531 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					BC1AE5871D61D93500620531 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = BC1AE5731D61D93400620531;
+					};
+					BC1AE5921D61D93500620531 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = BC1AE5731D61D93400620531;
+					};
+				};
+			};
+			buildConfigurationList = BC1AE56F1D61D93400620531 /* Build configuration list for PBXProject "FinestFood" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BC1AE56B1D61D93400620531;
+			productRefGroup = BC1AE5751D61D93400620531 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BC1AE5731D61D93400620531 /* FinestFood */,
+				BC1AE5871D61D93500620531 /* FinestFoodTests */,
+				BC1AE5921D61D93500620531 /* FinestFoodUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BC1AE5721D61D93400620531 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC1AE5821D61D93400620531 /* LaunchScreen.storyboard in Resources */,
+				BC1AE57F1D61D93400620531 /* Assets.xcassets in Resources */,
+				BC1AE57D1D61D93400620531 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC1AE5861D61D93500620531 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC1AE5911D61D93500620531 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4ADB78C62981298CAA0F2983 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinestFood/Pods-FinestFood-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		599EB9543FFB315755193498 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-FinestFood/Pods-FinestFood-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C8A4AA1D55FF70CAD241962 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BC1AE5701D61D93400620531 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC1AE57A1D61D93400620531 /* ViewController.swift in Sources */,
+				BC1AE5781D61D93400620531 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC1AE5841D61D93500620531 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC1AE58D1D61D93500620531 /* FinestFoodTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BC1AE58F1D61D93500620531 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BC1AE5981D61D93500620531 /* FinestFoodUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BC1AE58A1D61D93500620531 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC1AE5731D61D93400620531 /* FinestFood */;
+			targetProxy = BC1AE5891D61D93500620531 /* PBXContainerItemProxy */;
+		};
+		BC1AE5951D61D93500620531 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BC1AE5731D61D93400620531 /* FinestFood */;
+			targetProxy = BC1AE5941D61D93500620531 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BC1AE57B1D61D93400620531 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC1AE57C1D61D93400620531 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BC1AE5801D61D93400620531 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BC1AE5811D61D93400620531 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BC1AE59A1D61D93500620531 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		BC1AE59B1D61D93500620531 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BC1AE59D1D61D93500620531 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5C577F1872D7854C05E757F1 /* Pods-FinestFood.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FinestFood/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1606.FinestFood;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BC1AE59E1D61D93500620531 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FD95A70C8024870AFE5A5A4F /* Pods-FinestFood.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FinestFood/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1606.FinestFood;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BC1AE5A01D61D93500620531 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FinestFoodTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1606.FinestFoodTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinestFood.app/FinestFood";
+			};
+			name = Debug;
+		};
+		BC1AE5A11D61D93500620531 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = FinestFoodTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1606.FinestFoodTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FinestFood.app/FinestFood";
+			};
+			name = Release;
+		};
+		BC1AE5A31D61D93500620531 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FinestFoodUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1606.FinestFoodUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FinestFood;
+			};
+			name = Debug;
+		};
+		BC1AE5A41D61D93500620531 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = FinestFoodUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.1606.FinestFoodUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = FinestFood;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BC1AE56F1D61D93400620531 /* Build configuration list for PBXProject "FinestFood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC1AE59A1D61D93500620531 /* Debug */,
+				BC1AE59B1D61D93500620531 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC1AE59C1D61D93500620531 /* Build configuration list for PBXNativeTarget "FinestFood" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC1AE59D1D61D93500620531 /* Debug */,
+				BC1AE59E1D61D93500620531 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC1AE59F1D61D93500620531 /* Build configuration list for PBXNativeTarget "FinestFoodTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC1AE5A01D61D93500620531 /* Debug */,
+				BC1AE5A11D61D93500620531 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BC1AE5A21D61D93500620531 /* Build configuration list for PBXNativeTarget "FinestFoodUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BC1AE5A31D61D93500620531 /* Debug */,
+				BC1AE5A41D61D93500620531 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BC1AE56C1D61D93400620531 /* Project object */;
+}
