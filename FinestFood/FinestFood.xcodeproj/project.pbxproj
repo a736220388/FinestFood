@@ -59,8 +59,38 @@
 		BC273D301D6339ED008839EE /* shop_select@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC273D101D6339ED008839EE /* shop_select@2x.png */; };
 		BC273D311D6339ED008839EE /* shop_select@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BC273D111D6339ED008839EE /* shop_select@3x.png */; };
 		BC273D331D634B69008839EE /* FSScrollViewDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC273D321D634B69008839EE /* FSScrollViewDataModel.swift */; };
+		BC7061701D65340800046459 /* shixin.png in Resources */ = {isa = PBXBuildFile; fileRef = BC70616F1D65340800046459 /* shixin.png */; };
+		BC7061E81D65D41000046459 /* FoodListItemModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC7061E71D65D41000046459 /* FoodListItemModel.swift */; };
+		BC85E8301D67F91A0036480F /* CGCollectionsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85E82F1D67F91A0036480F /* CGCollectionsModel.swift */; };
+		BC85E8321D67FC5A0036480F /* CGHomeOutModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85E8311D67FC5A0036480F /* CGHomeOutModel.swift */; };
+		BC85E8351D68041B0036480F /* CGSubjectCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85E8331D68041B0036480F /* CGSubjectCell.swift */; };
+		BC85E8361D68041B0036480F /* CGSubjectCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC85E8341D68041B0036480F /* CGSubjectCell.xib */; };
+		BC85E8391D6813D70036480F /* CGHomeOutCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC85E8371D6813D70036480F /* CGHomeOutCell.swift */; };
+		BC92EE171D6BD1C2003E6094 /* FSScrollViewListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92EE161D6BD1C2003E6094 /* FSScrollViewListViewController.swift */; };
+		BC92EE501D6C32A7003E6094 /* FoodMoreListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92EE4F1D6C32A7003E6094 /* FoodMoreListView.swift */; };
+		BC92EE531D6C32D8003E6094 /* FoodMoreListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92EE511D6C32D8003E6094 /* FoodMoreListCell.swift */; };
+		BC92EE541D6C32D8003E6094 /* FoodMoreListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC92EE521D6C32D8003E6094 /* FoodMoreListCell.xib */; };
+		BC92EE561D6C34A8003E6094 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92EE551D6C34A8003E6094 /* Util.swift */; };
 		BCADC05B1D6459130086605C /* UIView+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADC05A1D6459130086605C /* UIView+Util.swift */; };
 		BCADC05D1D646AE50086605C /* jiantou.png in Resources */ = {isa = PBXBuildFile; fileRef = BCADC05C1D646AE50086605C /* jiantou.png */; };
+		BCADC05F1D64810F0086605C /* FoodSubjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADC05E1D64810F0086605C /* FoodSubjectListView.swift */; };
+		BCADC0621D6489FE0086605C /* FSAdCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADC0601D6489FE0086605C /* FSAdCell.swift */; };
+		BCADC0631D6489FE0086605C /* FSAdCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCADC0611D6489FE0086605C /* FSAdCell.xib */; };
+		BCADC0661D649D430086605C /* FoodListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADC0641D649D430086605C /* FoodListCell.swift */; };
+		BCADC0671D649D430086605C /* FoodListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCADC0651D649D430086605C /* FoodListCell.xib */; };
+		BCADC06B1D64B3BA0086605C /* FSFoodListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADC0681D64A6A60086605C /* FSFoodListModel.swift */; };
+		BCCF337B1D6B3CC9009A9EB8 /* MineProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF33791D6B3CC9009A9EB8 /* MineProfileCell.swift */; };
+		BCCF337C1D6B3CC9009A9EB8 /* MineProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCF337A1D6B3CC9009A9EB8 /* MineProfileCell.xib */; };
+		BCCF337E1D6B40E7009A9EB8 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF337D1D6B40E7009A9EB8 /* setting.png */; };
+		BCCF33801D6B4143009A9EB8 /* alert.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF337F1D6B4143009A9EB8 /* alert.png */; };
+		BCCF33821D6B41B1009A9EB8 /* profileImage.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF33811D6B41B1009A9EB8 /* profileImage.png */; };
+		BCCF33861D6B4299009A9EB8 /* mineProfileBg.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF33851D6B4299009A9EB8 /* mineProfileBg.png */; };
+		BCCF33881D6B4313009A9EB8 /* mineShixin.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF33871D6B4313009A9EB8 /* mineShixin.png */; };
+		BCF80B721D673046001CA55B /* xin.jpg in Resources */ = {isa = PBXBuildFile; fileRef = BCF80B711D673046001CA55B /* xin.jpg */; };
+		BCF80B751D67316C001CA55B /* FSFoodListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCF80B731D67316C001CA55B /* FSFoodListCell.swift */; };
+		BCF80B761D67316C001CA55B /* FSFoodListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCF80B741D67316C001CA55B /* FSFoodListCell.xib */; };
+		BCF80B781D673D4B001CA55B /* xin.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF80B771D673D4B001CA55B /* xin.png */; };
+		BCF80B7A1D6742DB001CA55B /* sdefaultImage.png in Resources */ = {isa = PBXBuildFile; fileRef = BCF80B791D6742DB001CA55B /* sdefaultImage.png */; };
 		BF94887BC4B172C1983B1703 /* Pods_FinestFood.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6FC5548DE928ADA561DF06B /* Pods_FinestFood.framework */; };
 /* End PBXBuildFile section */
 
@@ -142,8 +172,38 @@
 		BC273D101D6339ED008839EE /* shop_select@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_select@2x.png"; sourceTree = "<group>"; };
 		BC273D111D6339ED008839EE /* shop_select@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "shop_select@3x.png"; sourceTree = "<group>"; };
 		BC273D321D634B69008839EE /* FSScrollViewDataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSScrollViewDataModel.swift; sourceTree = "<group>"; };
+		BC70616F1D65340800046459 /* shixin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = shixin.png; path = ../../classes/FoodSubject/homePage/controllers/shixin.png; sourceTree = "<group>"; };
+		BC7061E71D65D41000046459 /* FoodListItemModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodListItemModel.swift; sourceTree = "<group>"; };
+		BC85E82F1D67F91A0036480F /* CGCollectionsModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGCollectionsModel.swift; sourceTree = "<group>"; };
+		BC85E8311D67FC5A0036480F /* CGHomeOutModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGHomeOutModel.swift; sourceTree = "<group>"; };
+		BC85E8331D68041B0036480F /* CGSubjectCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGSubjectCell.swift; sourceTree = "<group>"; };
+		BC85E8341D68041B0036480F /* CGSubjectCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CGSubjectCell.xib; sourceTree = "<group>"; };
+		BC85E8371D6813D70036480F /* CGHomeOutCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CGHomeOutCell.swift; sourceTree = "<group>"; };
+		BC92EE161D6BD1C2003E6094 /* FSScrollViewListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSScrollViewListViewController.swift; sourceTree = "<group>"; };
+		BC92EE4F1D6C32A7003E6094 /* FoodMoreListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodMoreListView.swift; sourceTree = "<group>"; };
+		BC92EE511D6C32D8003E6094 /* FoodMoreListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodMoreListCell.swift; sourceTree = "<group>"; };
+		BC92EE521D6C32D8003E6094 /* FoodMoreListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodMoreListCell.xib; sourceTree = "<group>"; };
+		BC92EE551D6C34A8003E6094 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
 		BCADC05A1D6459130086605C /* UIView+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Util.swift"; sourceTree = "<group>"; };
-		BCADC05C1D646AE50086605C /* jiantou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = jiantou.png; sourceTree = "<group>"; };
+		BCADC05C1D646AE50086605C /* jiantou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jiantou.png; path = ../../classes/FoodSubject/homePage/controllers/jiantou.png; sourceTree = "<group>"; };
+		BCADC05E1D64810F0086605C /* FoodSubjectListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodSubjectListView.swift; path = ../controllers/FoodSubjectListView.swift; sourceTree = "<group>"; };
+		BCADC0601D6489FE0086605C /* FSAdCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FSAdCell.swift; path = ../models/FSAdCell.swift; sourceTree = "<group>"; };
+		BCADC0611D6489FE0086605C /* FSAdCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FSAdCell.xib; path = ../models/FSAdCell.xib; sourceTree = "<group>"; };
+		BCADC0641D649D430086605C /* FoodListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodListCell.swift; path = ../models/FoodListCell.swift; sourceTree = "<group>"; };
+		BCADC0651D649D430086605C /* FoodListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FoodListCell.xib; path = ../models/FoodListCell.xib; sourceTree = "<group>"; };
+		BCADC0681D64A6A60086605C /* FSFoodListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSFoodListModel.swift; sourceTree = "<group>"; };
+		BCCF33791D6B3CC9009A9EB8 /* MineProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineProfileCell.swift; sourceTree = "<group>"; };
+		BCCF337A1D6B3CC9009A9EB8 /* MineProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineProfileCell.xib; sourceTree = "<group>"; };
+		BCCF337D1D6B40E7009A9EB8 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
+		BCCF337F1D6B4143009A9EB8 /* alert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = alert.png; sourceTree = "<group>"; };
+		BCCF33811D6B41B1009A9EB8 /* profileImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = profileImage.png; sourceTree = "<group>"; };
+		BCCF33851D6B4299009A9EB8 /* mineProfileBg.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mineProfileBg.png; sourceTree = "<group>"; };
+		BCCF33871D6B4313009A9EB8 /* mineShixin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = mineShixin.png; sourceTree = "<group>"; };
+		BCF80B711D673046001CA55B /* xin.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = xin.jpg; path = ../../classes/FoodSubject/homePage/views/xin.jpg; sourceTree = "<group>"; };
+		BCF80B731D67316C001CA55B /* FSFoodListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FSFoodListCell.swift; path = ../../../FoodSubject/homePage/views/FSFoodListCell.swift; sourceTree = "<group>"; };
+		BCF80B741D67316C001CA55B /* FSFoodListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FSFoodListCell.xib; path = ../../../FoodSubject/homePage/views/FSFoodListCell.xib; sourceTree = "<group>"; };
+		BCF80B771D673D4B001CA55B /* xin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = xin.png; path = ../../classes/FoodSubject/homePage/controllers/xin.png; sourceTree = "<group>"; };
+		BCF80B791D6742DB001CA55B /* sdefaultImage.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = sdefaultImage.png; path = ../../classes/FoodSubject/homePage/views/sdefaultImage.png; sourceTree = "<group>"; };
 		FD95A70C8024870AFE5A5A4F /* Pods-FinestFood.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FinestFood.release.xcconfig"; path = "Pods/Target Support Files/Pods-FinestFood/Pods-FinestFood.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -261,6 +321,7 @@
 		BC1AE5C01D61DDA100620531 /* resources */ = {
 			isa = PBXGroup;
 			children = (
+				BCF80B7B1D674317001CA55B /* commom */,
 				BC273CF01D6339EC008839EE /* nav */,
 				BC273CF91D6339EC008839EE /* tabbar */,
 			);
@@ -303,6 +364,13 @@
 		BC273CBE1D63327D008839EE /* views */ = {
 			isa = PBXGroup;
 			children = (
+				BCCF33851D6B4299009A9EB8 /* mineProfileBg.png */,
+				BCCF33811D6B41B1009A9EB8 /* profileImage.png */,
+				BCCF337F1D6B4143009A9EB8 /* alert.png */,
+				BCCF337D1D6B40E7009A9EB8 /* setting.png */,
+				BCCF33871D6B4313009A9EB8 /* mineShixin.png */,
+				BCCF33791D6B3CC9009A9EB8 /* MineProfileCell.swift */,
+				BCCF337A1D6B3CC9009A9EB8 /* MineProfileCell.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -376,6 +444,8 @@
 		BC273CC71D63328D008839EE /* models */ = {
 			isa = PBXGroup;
 			children = (
+				BC85E82F1D67F91A0036480F /* CGCollectionsModel.swift */,
+				BC85E8311D67FC5A0036480F /* CGHomeOutModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -383,6 +453,9 @@
 		BC273CC81D63328D008839EE /* views */ = {
 			isa = PBXGroup;
 			children = (
+				BC85E8331D68041B0036480F /* CGSubjectCell.swift */,
+				BC85E8341D68041B0036480F /* CGSubjectCell.xib */,
+				BC85E8371D6813D70036480F /* CGHomeOutCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -416,6 +489,7 @@
 		BC273CCC1D633298008839EE /* models */ = {
 			isa = PBXGroup;
 			children = (
+				BC7061E71D65D41000046459 /* FoodListItemModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -423,6 +497,8 @@
 		BC273CCD1D633298008839EE /* views */ = {
 			isa = PBXGroup;
 			children = (
+				BCF80B731D67316C001CA55B /* FSFoodListCell.swift */,
+				BCF80B741D67316C001CA55B /* FSFoodListCell.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -430,6 +506,7 @@
 		BC273CCE1D6332A0008839EE /* FoodSubject */ = {
 			isa = PBXGroup;
 			children = (
+				BC92EE121D6BD171003E6094 /* FSScrollViewList */,
 				BC273CCF1D6332A0008839EE /* homePage */,
 			);
 			path = FoodSubject;
@@ -449,7 +526,6 @@
 			isa = PBXGroup;
 			children = (
 				BC273CE61D63330F008839EE /* FoodSubjectViewController.swift */,
-				BCADC05C1D646AE50086605C /* jiantou.png */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -458,6 +534,7 @@
 			isa = PBXGroup;
 			children = (
 				BC273D321D634B69008839EE /* FSScrollViewDataModel.swift */,
+				BCADC0681D64A6A60086605C /* FSFoodListModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -465,6 +542,14 @@
 		BC273CD21D6332A0008839EE /* views */ = {
 			isa = PBXGroup;
 			children = (
+				BCADC05E1D64810F0086605C /* FoodSubjectListView.swift */,
+				BCADC0601D6489FE0086605C /* FSAdCell.swift */,
+				BCADC0611D6489FE0086605C /* FSAdCell.xib */,
+				BCADC0641D649D430086605C /* FoodListCell.swift */,
+				BCADC0651D649D430086605C /* FoodListCell.xib */,
+				BC92EE4F1D6C32A7003E6094 /* FoodMoreListView.swift */,
+				BC92EE511D6C32D8003E6094 /* FoodMoreListCell.swift */,
+				BC92EE521D6C32D8003E6094 /* FoodMoreListCell.xib */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -480,6 +565,7 @@
 				BC273CDA1D6332A7008839EE /* UIImageView+Util.swift */,
 				BC273CDB1D6332A7008839EE /* UILabel+Util.swift */,
 				BCADC05A1D6459130086605C /* UIView+Util.swift */,
+				BC92EE551D6C34A8003E6094 /* Util.swift */,
 			);
 			path = common;
 			sourceTree = "<group>";
@@ -528,6 +614,50 @@
 				BC273D111D6339ED008839EE /* shop_select@3x.png */,
 			);
 			path = tabbar;
+			sourceTree = "<group>";
+		};
+		BC92EE121D6BD171003E6094 /* FSScrollViewList */ = {
+			isa = PBXGroup;
+			children = (
+				BC92EE131D6BD171003E6094 /* controllers */,
+				BC92EE141D6BD171003E6094 /* models */,
+				BC92EE151D6BD171003E6094 /* views */,
+			);
+			path = FSScrollViewList;
+			sourceTree = "<group>";
+		};
+		BC92EE131D6BD171003E6094 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BC92EE161D6BD1C2003E6094 /* FSScrollViewListViewController.swift */,
+			);
+			path = controllers;
+			sourceTree = "<group>";
+		};
+		BC92EE141D6BD171003E6094 /* models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = models;
+			sourceTree = "<group>";
+		};
+		BC92EE151D6BD171003E6094 /* views */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = views;
+			sourceTree = "<group>";
+		};
+		BCF80B7B1D674317001CA55B /* commom */ = {
+			isa = PBXGroup;
+			children = (
+				BCADC05C1D646AE50086605C /* jiantou.png */,
+				BC70616F1D65340800046459 /* shixin.png */,
+				BCF80B711D673046001CA55B /* xin.jpg */,
+				BCF80B771D673D4B001CA55B /* xin.png */,
+				BCF80B791D6742DB001CA55B /* sdefaultImage.png */,
+			);
+			path = commom;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -641,11 +771,16 @@
 				BC273D1C1D6339ED008839EE /* community_select@2x.png in Resources */,
 				BC273D231D6339ED008839EE /* mine_normal@3x.png in Resources */,
 				BC273D2F1D6339ED008839EE /* shop_normal@3x.png in Resources */,
+				BCCF33801D6B4143009A9EB8 /* alert.png in Resources */,
 				BC273D2D1D6339ED008839EE /* shike_select@3x.png in Resources */,
 				BC273D241D6339ED008839EE /* mine_select@2x.png in Resources */,
 				BC273D291D6339ED008839EE /* report_select@3x.png in Resources */,
 				BC273D2C1D6339ED008839EE /* shike_select@2x.png in Resources */,
+				BC7061701D65340800046459 /* shixin.png in Resources */,
+				BCCF337E1D6B40E7009A9EB8 /* setting.png in Resources */,
+				BCCF337C1D6B3CC9009A9EB8 /* MineProfileCell.xib in Resources */,
 				BC273D1F1D6339ED008839EE /* home_normal@3x.png in Resources */,
+				BCADC0671D649D430086605C /* FoodListCell.xib in Resources */,
 				BC273D171D6339ED008839EE /* saoyisao@3x.png in Resources */,
 				BC1AE5821D61D93400620531 /* LaunchScreen.storyboard in Resources */,
 				BC273D141D6339ED008839EE /* navBar.png in Resources */,
@@ -659,19 +794,29 @@
 				BC273D121D6339ED008839EE /* nav_back_black.png in Resources */,
 				BC273D2A1D6339ED008839EE /* shike_normal@2x.png in Resources */,
 				BC1AE57D1D61D93400620531 /* Main.storyboard in Resources */,
+				BCCF33861D6B4299009A9EB8 /* mineProfileBg.png in Resources */,
+				BC85E8361D68041B0036480F /* CGSubjectCell.xib in Resources */,
 				BC273D301D6339ED008839EE /* shop_select@2x.png in Resources */,
+				BCCF33881D6B4313009A9EB8 /* mineShixin.png in Resources */,
+				BCADC0631D6489FE0086605C /* FSAdCell.xib in Resources */,
 				BC273D271D6339ED008839EE /* report_normal@3x.png in Resources */,
+				BCF80B781D673D4B001CA55B /* xin.png in Resources */,
 				BCADC05D1D646AE50086605C /* jiantou.png in Resources */,
 				BC273D1B1D6339ED008839EE /* community_normal@3x.png in Resources */,
 				BC273D181D6339ED008839EE /* search@2x.png in Resources */,
 				BC273D1A1D6339ED008839EE /* community_normal@2x.png in Resources */,
 				BC273D251D6339ED008839EE /* mine_select@3x.png in Resources */,
+				BC92EE541D6C32D8003E6094 /* FoodMoreListCell.xib in Resources */,
 				BC273D221D6339ED008839EE /* mine_normal@2x.png in Resources */,
 				BC273D311D6339ED008839EE /* shop_select@3x.png in Resources */,
 				BC273D281D6339ED008839EE /* report_select@2x.png in Resources */,
+				BCF80B761D67316C001CA55B /* FSFoodListCell.xib in Resources */,
 				BC273D201D6339ED008839EE /* home_select@2x.png in Resources */,
 				BC273D191D6339ED008839EE /* search@3x.png in Resources */,
 				BC273D2B1D6339ED008839EE /* shike_normal@3x.png in Resources */,
+				BCCF33821D6B41B1009A9EB8 /* profileImage.png in Resources */,
+				BCF80B7A1D6742DB001CA55B /* sdefaultImage.png in Resources */,
+				BCF80B721D673046001CA55B /* xin.jpg in Resources */,
 				BC273D131D6339ED008839EE /* nav_back_white.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -747,19 +892,34 @@
 			files = (
 				BC273CE31D6332A7008839EE /* UILabel+Util.swift in Sources */,
 				BC273CE71D63330F008839EE /* FoodSubjectViewController.swift in Sources */,
+				BC85E8301D67F91A0036480F /* CGCollectionsModel.swift in Sources */,
+				BC85E8321D67FC5A0036480F /* CGHomeOutModel.swift in Sources */,
+				BCADC06B1D64B3BA0086605C /* FSFoodListModel.swift in Sources */,
 				BC1AE57A1D61D93400620531 /* ViewController.swift in Sources */,
+				BCADC05F1D64810F0086605C /* FoodSubjectListView.swift in Sources */,
 				BC273CE11D6332A7008839EE /* UIButton+Util.swift in Sources */,
+				BCADC0621D6489FE0086605C /* FSAdCell.swift in Sources */,
 				BC273D331D634B69008839EE /* FSScrollViewDataModel.swift in Sources */,
 				BC273CE51D6332ED008839EE /* FoodListViewController.swift in Sources */,
+				BC92EE501D6C32A7003E6094 /* FoodMoreListView.swift in Sources */,
 				BC1AE5781D61D93400620531 /* AppDelegate.swift in Sources */,
+				BCADC0661D649D430086605C /* FoodListCell.swift in Sources */,
 				BC273CE21D6332A7008839EE /* UIImageView+Util.swift in Sources */,
 				BC273CEB1D633336008839EE /* MoreViewController.swift in Sources */,
+				BC7061E81D65D41000046459 /* FoodListItemModel.swift in Sources */,
 				BC273CDF1D6332A7008839EE /* MyDownloader.swift in Sources */,
 				BC273CDE1D6332A7008839EE /* MainTabBarController.swift in Sources */,
+				BC85E8351D68041B0036480F /* CGSubjectCell.swift in Sources */,
 				BC273CE91D633329008839EE /* CategoryViewController.swift in Sources */,
 				BC273CDC1D6332A7008839EE /* BaseViewController.swift in Sources */,
 				BC273CDD1D6332A7008839EE /* Constant.swift in Sources */,
+				BCCF337B1D6B3CC9009A9EB8 /* MineProfileCell.swift in Sources */,
+				BCF80B751D67316C001CA55B /* FSFoodListCell.swift in Sources */,
+				BC85E8391D6813D70036480F /* CGHomeOutCell.swift in Sources */,
+				BC92EE171D6BD1C2003E6094 /* FSScrollViewListViewController.swift in Sources */,
 				BCADC05B1D6459130086605C /* UIView+Util.swift in Sources */,
+				BC92EE561D6C34A8003E6094 /* Util.swift in Sources */,
+				BC92EE531D6C32D8003E6094 /* FoodMoreListCell.swift in Sources */,
 				BC273CEF1D633371008839EE /* MineViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

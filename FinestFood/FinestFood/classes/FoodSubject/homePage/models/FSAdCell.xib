@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="adCellId" id="KGk-i7-Jjw" customClass="FSAdCell" customModule="FinestFood" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OXs-ti-EnW" userLabel="scrollView">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="99"/>
+                    </scrollView>
+                    <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Ez9-WM-Ogu" userLabel="pageControl">
+                        <rect key="frame" x="138" y="62" width="100" height="37"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="37" id="8FO-Hv-LCH"/>
+                            <constraint firstAttribute="width" constant="100" id="TrB-JL-xw7"/>
+                        </constraints>
+                    </pageControl>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="Ez9-WM-Ogu" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="4CT-c3-AWW"/>
+                    <constraint firstAttribute="bottom" secondItem="Ez9-WM-Ogu" secondAttribute="bottom" id="LdI-D6-4pW"/>
+                    <constraint firstAttribute="bottom" secondItem="OXs-ti-EnW" secondAttribute="bottom" id="c6c-ux-ejk"/>
+                    <constraint firstItem="OXs-ti-EnW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="gXl-mD-gd3"/>
+                    <constraint firstItem="OXs-ti-EnW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hat-7Y-5li"/>
+                    <constraint firstAttribute="trailing" secondItem="OXs-ti-EnW" secondAttribute="trailing" id="zfw-ot-DG8"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="pageControl" destination="Ez9-WM-Ogu" id="5TA-au-A1r"/>
+                <outlet property="scrollView" destination="OXs-ti-EnW" id="5pz-F1-kBl"/>
+            </connections>
+        </tableViewCell>
+    </objects>
+</document>

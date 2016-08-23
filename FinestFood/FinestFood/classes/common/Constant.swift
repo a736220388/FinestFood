@@ -12,6 +12,17 @@ public let kScreenWidth = UIScreen.mainScreen().bounds.width
 public let kScreenHeight = UIScreen.mainScreen().bounds.height
 
 public let FSScrollViewUrl = "http://api.guozhoumoapp.com/v1/banners?channel=iOS"
+public let FSScrollViewListlUrl = "http://api.guozhoumoapp.com/v1/collections/%d/posts?gender=%d&generation=%d&limit=%d&offset=%d"
+public let FSFoodListUrl = "http://api.guozhoumoapp.com/v1/channels/2/items?gender=%d&generation=%d&limit=%d&offset=%d"
+public let FSFoodMoreListUrl = "http://api.guozhoumoapp.com/v1/channels/14/items?limit=20&offset=0"//12---15
+
+
+
+public let FLFoodListUrl = "http://api.guozhoumoapp.com/v2/items?gender=%d&generation=%d&limit=%d&offset=%d"
+
+public let CGSubjectUrl = "http://api.guozhoumoapp.com/v1/collections?limit=6&offset=0"
+public let CGHomeOutUrl = "http://api.guozhoumoapp.com/v1/channel_groups/all"
+
 
 /*
  精选
@@ -47,5 +58,7 @@ public let FSScrollViewUrl = "http://api.guozhoumoapp.com/v1/banners?channel=iOS
  单品
  内容:http://api.guozhoumoapp.com/v2/items?gender=1&generation=0&limit=20&offset=0
 
+ 宅家,出门 http://api.guozhoumoapp.com/v1/channel_groups/all
+ 专题集合 http://api.guozhoumoapp.com/v1/collections?limit=6&offset=0
  
  */

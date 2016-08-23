@@ -1,29 +1,37 @@
 //
-//  BaseViewController.swift
+//  FSScrollViewListViewController.swift
 //  FinestFood
 //
-//  Created by qianfeng on 16/8/15.
+//  Created by qianfeng on 16/8/23.
 //  Copyright © 2016年 qianfeng. All rights reserved.
 //
 
 import UIKit
 
-class BaseViewController: UIViewController {
+class FSScrollViewListViewController: BaseViewController {
     
-    var gender = 1
-    var generation = 0
-    var limit = 20
-    var offset = 0
-    
+    var targetId:Int?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-        downloadData()
     }
-    func downloadData(){
-        
+    override func downloadData() {
+        let url = String(format: FSScrollViewListlUrl, targetId!,gender,generation,limit,offset)
+        let downloader = MyDownloader()
+        downloader.downloadWithUrlString(url)
+        downloader.didFailWithError = {
+            error in
+            print(error)
+        }
+        downloader.didFinishWithData = {
+            data in
+            let jsonData = try! NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers)
+            print(jsonData)
+        }
     }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

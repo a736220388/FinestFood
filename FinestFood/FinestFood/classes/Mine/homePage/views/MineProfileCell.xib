@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mineProfileCellId" id="KGk-i7-Jjw" customClass="MineProfileCell" customModule="FinestFood" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mineProfileBg.png" translatesAutoresizingMaskIntoConstraints="NO" id="QGI-d0-hXn">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9SJ-I9-xPY">
+                        <rect key="frame" x="20" y="20" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="2Bv-iJ-QD0"/>
+                            <constraint firstAttribute="height" constant="30" id="bcb-ye-7xC"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="alert.png"/>
+                        <connections>
+                            <action selector="alertAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Urp-Ur-yGN"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aQw-8W-fa5">
+                        <rect key="frame" x="325" y="20" width="30" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="30" id="GBQ-nS-mmp"/>
+                            <constraint firstAttribute="height" constant="30" id="leF-0l-PdY"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="setting.png"/>
+                        <connections>
+                            <action selector="steAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ItM-Xq-l4B"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T0t-1g-aS1">
+                        <rect key="frame" x="157" y="70" width="60" height="60"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="QXG-1S-1KS"/>
+                            <constraint firstAttribute="height" constant="60" id="tRV-Lh-OVj"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="profileImage.png"/>
+                        <connections>
+                            <action selector="loginAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wOo-Js-bh6"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghY-y6-gHH">
+                        <rect key="frame" x="157" y="130" width="60" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="60" id="dVN-X4-5Ed"/>
+                            <constraint firstAttribute="height" constant="20" id="eQh-sm-DaF"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9SJ-I9-xPY" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="0TK-oR-PTw"/>
+                    <constraint firstItem="T0t-1g-aS1" firstAttribute="centerY" secondItem="QGI-d0-hXn" secondAttribute="centerY" id="4ZL-YB-C4v"/>
+                    <constraint firstItem="aQw-8W-fa5" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="6cF-gy-alQ"/>
+                    <constraint firstAttribute="trailing" secondItem="QGI-d0-hXn" secondAttribute="trailing" id="6v9-jU-yJX"/>
+                    <constraint firstItem="9SJ-I9-xPY" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="20" id="7ZO-6U-hXs"/>
+                    <constraint firstAttribute="trailing" secondItem="aQw-8W-fa5" secondAttribute="trailing" constant="20" id="Hcm-ht-cn3"/>
+                    <constraint firstItem="ghY-y6-gHH" firstAttribute="top" secondItem="T0t-1g-aS1" secondAttribute="bottom" id="XTO-s8-TGm"/>
+                    <constraint firstItem="QGI-d0-hXn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YNl-7E-GJi"/>
+                    <constraint firstAttribute="bottom" secondItem="QGI-d0-hXn" secondAttribute="bottom" id="YWW-w8-wvS"/>
+                    <constraint firstItem="ghY-y6-gHH" firstAttribute="centerX" secondItem="QGI-d0-hXn" secondAttribute="centerX" id="ZFz-Qr-PAv"/>
+                    <constraint firstItem="QGI-d0-hXn" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="duF-h6-gfG"/>
+                    <constraint firstItem="T0t-1g-aS1" firstAttribute="centerX" secondItem="QGI-d0-hXn" secondAttribute="centerX" id="i7q-GR-ene"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="293.5" y="187"/>
+        </tableViewCell>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mineListCellId" id="JC0-dT-2Eb" customClass="MineProfileCell" customModule="FinestFood" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JC0-dT-2Eb" id="tO1-al-AV7">
+                <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jak-dH-Tiz">
+                        <rect key="frame" x="0.0" y="0.0" width="188" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="hy7-2f-4A2"/>
+                        </constraints>
+                        <state key="normal" title="喜欢的商品">
+                            <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        </state>
+                        <connections>
+                            <action selector="likeProduct:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="dTO-dy-iBV"/>
+                        </connections>
+                    </button>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h05-d6-cvO">
+                        <rect key="frame" x="188" y="0.0" width="187" height="30"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="30" id="Dok-7l-o3b"/>
+                        </constraints>
+                        <state key="normal" title="喜欢的主题">
+                            <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                        </state>
+                        <connections>
+                            <action selector="likeSubject:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="3zR-JG-wT5"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录可以享受更多功能" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pfl-i3-vPY">
+                        <rect key="frame" x="113" y="125" width="150" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="8Qg-gc-Og0"/>
+                            <constraint firstAttribute="width" constant="150" id="UhR-4R-6Jc"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RKJ-Bc-oQB">
+                        <rect key="frame" x="163" y="75" width="50" height="50"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="50" id="2bd-12-gGQ"/>
+                            <constraint firstAttribute="height" constant="50" id="sss-4E-nTJ"/>
+                        </constraints>
+                        <state key="normal" backgroundImage="mineShixin.png"/>
+                        <connections>
+                            <action selector="loginAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cqU-Nf-QbT"/>
+                        </connections>
+                    </button>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="RKJ-Bc-oQB" firstAttribute="centerX" secondItem="tO1-al-AV7" secondAttribute="centerX" id="12U-AF-u4R"/>
+                    <constraint firstItem="Jak-dH-Tiz" firstAttribute="leading" secondItem="tO1-al-AV7" secondAttribute="leading" id="6Tk-EU-YZK"/>
+                    <constraint firstItem="RKJ-Bc-oQB" firstAttribute="centerY" secondItem="tO1-al-AV7" secondAttribute="centerY" id="Dui-oU-tYp"/>
+                    <constraint firstItem="h05-d6-cvO" firstAttribute="width" secondItem="Jak-dH-Tiz" secondAttribute="width" id="E6V-2b-dxP"/>
+                    <constraint firstItem="pfl-i3-vPY" firstAttribute="top" secondItem="RKJ-Bc-oQB" secondAttribute="bottom" id="Q9H-gp-oD3"/>
+                    <constraint firstAttribute="trailing" secondItem="h05-d6-cvO" secondAttribute="trailing" id="ZNv-AT-6SG"/>
+                    <constraint firstItem="h05-d6-cvO" firstAttribute="leading" secondItem="Jak-dH-Tiz" secondAttribute="trailing" id="htf-vg-pbx"/>
+                    <constraint firstItem="Jak-dH-Tiz" firstAttribute="top" secondItem="tO1-al-AV7" secondAttribute="top" id="j4e-el-b3U"/>
+                    <constraint firstItem="pfl-i3-vPY" firstAttribute="centerX" secondItem="tO1-al-AV7" secondAttribute="centerX" id="qR4-Oi-HiH"/>
+                    <constraint firstItem="h05-d6-cvO" firstAttribute="top" secondItem="tO1-al-AV7" secondAttribute="top" id="xcl-YX-1lA"/>
+                </constraints>
+            </tableViewCellContentView>
+            <point key="canvasLocation" x="293.5" y="455"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="alert.png" width="200" height="200"/>
+        <image name="mineProfileBg.png" width="1000" height="560"/>
+        <image name="mineShixin.png" width="200" height="200"/>
+        <image name="profileImage.png" width="200" height="200"/>
+        <image name="setting.png" width="200" height="200"/>
+    </resources>
+</document>
