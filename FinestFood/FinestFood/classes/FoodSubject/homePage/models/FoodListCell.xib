@@ -14,9 +14,12 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="fxN-JC-LQq" userLabel="mainImageView">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A9B-Zy-aDP" userLabel="MainBtn">
                         <rect key="frame" x="5" y="25" width="365" height="169"/>
-                    </imageView>
+                        <connections>
+                            <action selector="mainBtnAction:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="4nV-ti-6H1"/>
+                        </connections>
+                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xed-JK-BFg" userLabel="timeLabel">
                         <rect key="frame" x="10" y="5" width="160" height="20"/>
                         <constraints>
@@ -70,20 +73,20 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="bottom" secondItem="fxN-JC-LQq" secondAttribute="bottom" constant="5" id="00o-d5-mXx"/>
-                    <constraint firstItem="fxN-JC-LQq" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="0Te-Wz-A3O"/>
+                    <constraint firstItem="A9B-Zy-aDP" firstAttribute="top" secondItem="Xed-JK-BFg" secondAttribute="bottom" id="06f-cW-JCC"/>
                     <constraint firstAttribute="trailing" secondItem="O6e-ao-HCR" secondAttribute="trailing" constant="15" id="5k7-Tg-6UO"/>
+                    <constraint firstAttribute="trailing" secondItem="A9B-Zy-aDP" secondAttribute="trailing" constant="5" id="6nS-1y-bRX"/>
                     <constraint firstItem="Xed-JK-BFg" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="O99-1a-ybA"/>
-                    <constraint firstAttribute="trailing" secondItem="fxN-JC-LQq" secondAttribute="trailing" constant="5" id="auF-Wo-5ms"/>
+                    <constraint firstAttribute="bottom" secondItem="A9B-Zy-aDP" secondAttribute="bottom" constant="5" id="Ryd-Dg-DCF"/>
+                    <constraint firstItem="A9B-Zy-aDP" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="dQH-Zm-klC"/>
                     <constraint firstAttribute="bottom" secondItem="2re-Xu-6r7" secondAttribute="bottom" constant="10" id="ebF-Pn-5gM"/>
                     <constraint firstItem="Xed-JK-BFg" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="hnp-zf-FCT"/>
                     <constraint firstItem="2re-Xu-6r7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="lAc-Sf-u38"/>
                     <constraint firstItem="O6e-ao-HCR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="35" id="sJf-de-rgB"/>
-                    <constraint firstItem="fxN-JC-LQq" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="ymr-JO-3g2"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="mainImageView" destination="fxN-JC-LQq" id="Swx-A7-CPz"/>
+                <outlet property="mainBtn" destination="A9B-Zy-aDP" id="h0o-Ou-BwH"/>
                 <outlet property="starsLabel" destination="sc8-vQ-J0z" id="r0C-KV-3DK"/>
                 <outlet property="starsView" destination="O6e-ao-HCR" id="gLX-nA-tfy"/>
                 <outlet property="timeLabel" destination="Xed-JK-BFg" id="etd-nG-9Ud"/>

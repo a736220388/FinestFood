@@ -23,7 +23,8 @@ class MyDownloader: NSObject {
                 if httpRes.statusCode == 200{
                     self.didFinishWithData!(data!)
                 }else{
-                    self.didFailWithError!(error!)
+                    let error = NSError(domain: "\(httpRes.statusCode)", code: 0, userInfo: nil)
+                    self.didFailWithError?(error)
                 }
             }
         }

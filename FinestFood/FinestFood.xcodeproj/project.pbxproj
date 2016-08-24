@@ -71,6 +71,7 @@
 		BC92EE531D6C32D8003E6094 /* FoodMoreListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92EE511D6C32D8003E6094 /* FoodMoreListCell.swift */; };
 		BC92EE541D6C32D8003E6094 /* FoodMoreListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BC92EE521D6C32D8003E6094 /* FoodMoreListCell.xib */; };
 		BC92EE561D6C34A8003E6094 /* Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92EE551D6C34A8003E6094 /* Util.swift */; };
+		BC92EE581D6C3E24003E6094 /* FSFoodMoreListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BC92EE571D6C3E24003E6094 /* FSFoodMoreListModel.swift */; };
 		BCADC05B1D6459130086605C /* UIView+Util.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADC05A1D6459130086605C /* UIView+Util.swift */; };
 		BCADC05D1D646AE50086605C /* jiantou.png in Resources */ = {isa = PBXBuildFile; fileRef = BCADC05C1D646AE50086605C /* jiantou.png */; };
 		BCADC05F1D64810F0086605C /* FoodSubjectListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADC05E1D64810F0086605C /* FoodSubjectListView.swift */; };
@@ -79,6 +80,14 @@
 		BCADC0661D649D430086605C /* FoodListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADC0641D649D430086605C /* FoodListCell.swift */; };
 		BCADC0671D649D430086605C /* FoodListCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCADC0651D649D430086605C /* FoodListCell.xib */; };
 		BCADC06B1D64B3BA0086605C /* FSFoodListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCADC0681D64A6A60086605C /* FSFoodListModel.swift */; };
+		BCCA1DC81D6D8D5D0031F7C1 /* FoodDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCA1DC71D6D8D5D0031F7C1 /* FoodDetailViewController.swift */; };
+		BCCA1DCA1D6D93480031F7C1 /* FoodDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCA1DC91D6D93480031F7C1 /* FoodDetailModel.swift */; };
+		BCCA1DCD1D6D9F260031F7C1 /* FoodDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCA1DCB1D6D9F260031F7C1 /* FoodDetailCell.swift */; };
+		BCCA1DCE1D6D9F260031F7C1 /* FoodDetailCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCA1DCC1D6D9F260031F7C1 /* FoodDetailCell.xib */; };
+		BCCA1DD41D6DC5190031F7C1 /* fdlikes.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCA1DD31D6DC5190031F7C1 /* fdlikes.png */; };
+		BCCA1DD61D6DC5520031F7C1 /* fdshare.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCA1DD51D6DC5520031F7C1 /* fdshare.png */; };
+		BCCA1DD81D6DC6060031F7C1 /* fdcomment.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCA1DD71D6DC6060031F7C1 /* fdcomment.png */; };
+		BCCA1DDA1D6DC7C40031F7C1 /* FoodDetailWebCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCA1DD91D6DC7C40031F7C1 /* FoodDetailWebCell.swift */; };
 		BCCF337B1D6B3CC9009A9EB8 /* MineProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BCCF33791D6B3CC9009A9EB8 /* MineProfileCell.swift */; };
 		BCCF337C1D6B3CC9009A9EB8 /* MineProfileCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BCCF337A1D6B3CC9009A9EB8 /* MineProfileCell.xib */; };
 		BCCF337E1D6B40E7009A9EB8 /* setting.png in Resources */ = {isa = PBXBuildFile; fileRef = BCCF337D1D6B40E7009A9EB8 /* setting.png */; };
@@ -184,6 +193,7 @@
 		BC92EE511D6C32D8003E6094 /* FoodMoreListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodMoreListCell.swift; sourceTree = "<group>"; };
 		BC92EE521D6C32D8003E6094 /* FoodMoreListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodMoreListCell.xib; sourceTree = "<group>"; };
 		BC92EE551D6C34A8003E6094 /* Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Util.swift; sourceTree = "<group>"; };
+		BC92EE571D6C3E24003E6094 /* FSFoodMoreListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSFoodMoreListModel.swift; sourceTree = "<group>"; };
 		BCADC05A1D6459130086605C /* UIView+Util.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIView+Util.swift"; sourceTree = "<group>"; };
 		BCADC05C1D646AE50086605C /* jiantou.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = jiantou.png; path = ../../classes/FoodSubject/homePage/controllers/jiantou.png; sourceTree = "<group>"; };
 		BCADC05E1D64810F0086605C /* FoodSubjectListView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodSubjectListView.swift; path = ../controllers/FoodSubjectListView.swift; sourceTree = "<group>"; };
@@ -192,6 +202,14 @@
 		BCADC0641D649D430086605C /* FoodListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FoodListCell.swift; path = ../models/FoodListCell.swift; sourceTree = "<group>"; };
 		BCADC0651D649D430086605C /* FoodListCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = FoodListCell.xib; path = ../models/FoodListCell.xib; sourceTree = "<group>"; };
 		BCADC0681D64A6A60086605C /* FSFoodListModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FSFoodListModel.swift; sourceTree = "<group>"; };
+		BCCA1DC71D6D8D5D0031F7C1 /* FoodDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailViewController.swift; sourceTree = "<group>"; };
+		BCCA1DC91D6D93480031F7C1 /* FoodDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailModel.swift; sourceTree = "<group>"; };
+		BCCA1DCB1D6D9F260031F7C1 /* FoodDetailCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailCell.swift; sourceTree = "<group>"; };
+		BCCA1DCC1D6D9F260031F7C1 /* FoodDetailCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FoodDetailCell.xib; sourceTree = "<group>"; };
+		BCCA1DD31D6DC5190031F7C1 /* fdlikes.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fdlikes.png; sourceTree = "<group>"; };
+		BCCA1DD51D6DC5520031F7C1 /* fdshare.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fdshare.png; sourceTree = "<group>"; };
+		BCCA1DD71D6DC6060031F7C1 /* fdcomment.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = fdcomment.png; sourceTree = "<group>"; };
+		BCCA1DD91D6DC7C40031F7C1 /* FoodDetailWebCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FoodDetailWebCell.swift; sourceTree = "<group>"; };
 		BCCF33791D6B3CC9009A9EB8 /* MineProfileCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MineProfileCell.swift; sourceTree = "<group>"; };
 		BCCF337A1D6B3CC9009A9EB8 /* MineProfileCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MineProfileCell.xib; sourceTree = "<group>"; };
 		BCCF337D1D6B40E7009A9EB8 /* setting.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = setting.png; sourceTree = "<group>"; };
@@ -526,6 +544,7 @@
 			isa = PBXGroup;
 			children = (
 				BC273CE61D63330F008839EE /* FoodSubjectViewController.swift */,
+				BCCA1DC71D6D8D5D0031F7C1 /* FoodDetailViewController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -535,6 +554,8 @@
 			children = (
 				BC273D321D634B69008839EE /* FSScrollViewDataModel.swift */,
 				BCADC0681D64A6A60086605C /* FSFoodListModel.swift */,
+				BC92EE571D6C3E24003E6094 /* FSFoodMoreListModel.swift */,
+				BCCA1DC91D6D93480031F7C1 /* FoodDetailModel.swift */,
 			);
 			path = models;
 			sourceTree = "<group>";
@@ -550,6 +571,12 @@
 				BC92EE4F1D6C32A7003E6094 /* FoodMoreListView.swift */,
 				BC92EE511D6C32D8003E6094 /* FoodMoreListCell.swift */,
 				BC92EE521D6C32D8003E6094 /* FoodMoreListCell.xib */,
+				BCCA1DCB1D6D9F260031F7C1 /* FoodDetailCell.swift */,
+				BCCA1DCC1D6D9F260031F7C1 /* FoodDetailCell.xib */,
+				BCCA1DD51D6DC5520031F7C1 /* fdshare.png */,
+				BCCA1DD31D6DC5190031F7C1 /* fdlikes.png */,
+				BCCA1DD71D6DC6060031F7C1 /* fdcomment.png */,
+				BCCA1DD91D6DC7C40031F7C1 /* FoodDetailWebCell.swift */,
 			);
 			path = views;
 			sourceTree = "<group>";
@@ -767,6 +794,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BCCA1DD81D6DC6060031F7C1 /* fdcomment.png in Resources */,
 				BC273D1E1D6339ED008839EE /* home_normal@2x.png in Resources */,
 				BC273D1C1D6339ED008839EE /* community_select@2x.png in Resources */,
 				BC273D231D6339ED008839EE /* mine_normal@3x.png in Resources */,
@@ -789,6 +817,9 @@
 				BC273D151D6339ED008839EE /* navBtn_bag.png in Resources */,
 				BC1AE57F1D61D93400620531 /* Assets.xcassets in Resources */,
 				BC273D161D6339ED008839EE /* saoyisao@2x.png in Resources */,
+				BCCA1DD41D6DC5190031F7C1 /* fdlikes.png in Resources */,
+				BCCA1DCE1D6D9F260031F7C1 /* FoodDetailCell.xib in Resources */,
+				BCCA1DD61D6DC5520031F7C1 /* fdshare.png in Resources */,
 				BC273D261D6339ED008839EE /* report_normal@2x.png in Resources */,
 				BC273D2E1D6339ED008839EE /* shop_normal@2x.png in Resources */,
 				BC273D121D6339ED008839EE /* nav_back_black.png in Resources */,
@@ -897,22 +928,27 @@
 				BCADC06B1D64B3BA0086605C /* FSFoodListModel.swift in Sources */,
 				BC1AE57A1D61D93400620531 /* ViewController.swift in Sources */,
 				BCADC05F1D64810F0086605C /* FoodSubjectListView.swift in Sources */,
+				BCCA1DDA1D6DC7C40031F7C1 /* FoodDetailWebCell.swift in Sources */,
 				BC273CE11D6332A7008839EE /* UIButton+Util.swift in Sources */,
 				BCADC0621D6489FE0086605C /* FSAdCell.swift in Sources */,
 				BC273D331D634B69008839EE /* FSScrollViewDataModel.swift in Sources */,
 				BC273CE51D6332ED008839EE /* FoodListViewController.swift in Sources */,
+				BCCA1DCD1D6D9F260031F7C1 /* FoodDetailCell.swift in Sources */,
 				BC92EE501D6C32A7003E6094 /* FoodMoreListView.swift in Sources */,
 				BC1AE5781D61D93400620531 /* AppDelegate.swift in Sources */,
 				BCADC0661D649D430086605C /* FoodListCell.swift in Sources */,
 				BC273CE21D6332A7008839EE /* UIImageView+Util.swift in Sources */,
 				BC273CEB1D633336008839EE /* MoreViewController.swift in Sources */,
+				BCCA1DCA1D6D93480031F7C1 /* FoodDetailModel.swift in Sources */,
 				BC7061E81D65D41000046459 /* FoodListItemModel.swift in Sources */,
 				BC273CDF1D6332A7008839EE /* MyDownloader.swift in Sources */,
 				BC273CDE1D6332A7008839EE /* MainTabBarController.swift in Sources */,
 				BC85E8351D68041B0036480F /* CGSubjectCell.swift in Sources */,
 				BC273CE91D633329008839EE /* CategoryViewController.swift in Sources */,
+				BC92EE581D6C3E24003E6094 /* FSFoodMoreListModel.swift in Sources */,
 				BC273CDC1D6332A7008839EE /* BaseViewController.swift in Sources */,
 				BC273CDD1D6332A7008839EE /* Constant.swift in Sources */,
+				BCCA1DC81D6D8D5D0031F7C1 /* FoodDetailViewController.swift in Sources */,
 				BCCF337B1D6B3CC9009A9EB8 /* MineProfileCell.swift in Sources */,
 				BCF80B751D67316C001CA55B /* FSFoodListCell.swift in Sources */,
 				BC85E8391D6813D70036480F /* CGHomeOutCell.swift in Sources */,

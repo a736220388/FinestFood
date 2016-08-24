@@ -14,9 +14,9 @@
                 <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="kfm-fF-FR2" userLabel="mainImageView">
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2V9-pM-T2f" userLabel="mainBtn">
                         <rect key="frame" x="5" y="5" width="365" height="189"/>
-                    </imageView>
+                    </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h03-MF-A6D" userLabel="titleLabel">
                         <rect key="frame" x="10" y="169" width="355" height="20"/>
                         <constraints>
@@ -60,21 +60,21 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailing" secondItem="kfm-fF-FR2" secondAttribute="trailing" constant="5" id="0fG-eH-mNX"/>
-                    <constraint firstAttribute="bottom" secondItem="kfm-fF-FR2" secondAttribute="bottom" constant="5" id="6RP-rN-rt3"/>
-                    <constraint firstItem="kfm-fF-FR2" firstAttribute="top" secondItem="Aw9-4b-bg7" secondAttribute="top" constant="5" id="Crv-Q2-Boe"/>
                     <constraint firstAttribute="trailing" secondItem="ZcO-WW-v0g" secondAttribute="trailing" constant="15" id="I94-MZ-qfg"/>
-                    <constraint firstItem="kfm-fF-FR2" firstAttribute="leading" secondItem="Aw9-4b-bg7" secondAttribute="leading" constant="5" id="bgf-vY-DRD"/>
                     <constraint firstAttribute="bottom" secondItem="h03-MF-A6D" secondAttribute="bottom" constant="10" id="cOH-G0-sjK"/>
+                    <constraint firstAttribute="trailing" secondItem="2V9-pM-T2f" secondAttribute="trailing" constant="5" id="edY-9N-kqa"/>
                     <constraint firstItem="h03-MF-A6D" firstAttribute="leading" secondItem="Aw9-4b-bg7" secondAttribute="leading" constant="10" id="gJj-ZD-cy0"/>
+                    <constraint firstItem="2V9-pM-T2f" firstAttribute="leading" secondItem="Aw9-4b-bg7" secondAttribute="leading" constant="5" id="it3-ow-V3D"/>
                     <constraint firstItem="ZcO-WW-v0g" firstAttribute="top" secondItem="Aw9-4b-bg7" secondAttribute="top" constant="20" id="nxp-MP-Uq7"/>
+                    <constraint firstAttribute="bottom" secondItem="2V9-pM-T2f" secondAttribute="bottom" constant="5" id="wD9-bP-XHE"/>
+                    <constraint firstItem="2V9-pM-T2f" firstAttribute="top" secondItem="Aw9-4b-bg7" secondAttribute="top" constant="5" id="zob-Es-rmg"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="mainImageView" destination="kfm-fF-FR2" id="reD-sc-jDP"/>
-                <outlet property="starsLabel" destination="l83-6H-YYl" id="GPN-IX-dqK"/>
-                <outlet property="starsView" destination="ZcO-WW-v0g" id="4oo-nN-hYK"/>
-                <outlet property="titleLabel" destination="h03-MF-A6D" id="Qyt-2p-PQA"/>
+                <outlet property="mainBtn" destination="2V9-pM-T2f" id="xwd-9N-CL3"/>
+                <outlet property="starsLabel" destination="l83-6H-YYl" id="ZfP-0Q-0QM"/>
+                <outlet property="starsView" destination="ZcO-WW-v0g" id="dlA-y1-pPg"/>
+                <outlet property="titleLabel" destination="h03-MF-A6D" id="gdu-sT-KfR"/>
             </connections>
             <point key="canvasLocation" x="501.5" y="285"/>
         </tableViewCell>

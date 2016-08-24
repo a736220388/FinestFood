@@ -73,7 +73,7 @@ class FSAdCell: UITableViewCell {
     }
     func tapAction(){
         let index = Int(scrollView.contentOffset.x / scrollView.bounds.size.width)
-        
+        print(index)
     }
     func timerAction(){
         UIView.beginAnimations("animate1", context: nil)

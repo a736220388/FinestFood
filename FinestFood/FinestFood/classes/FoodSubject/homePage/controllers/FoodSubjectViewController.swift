@@ -13,32 +13,39 @@ class FoodSubjectViewController: BaseViewController {
     lazy var scrollViewArray = NSMutableArray()
     lazy var titleScrollViewArray = NSMutableArray()
     private var titleScrollView:UIScrollView?
+    private var contentScrollView = UIScrollView()
     private var foodSujectListView:FoodSubjectListView?
     lazy var foodListArray = NSMutableArray()
+    private var shoppingView:FoodMoreListView?
+    private var courseView:FoodMoreListView?
+    private var tourView:FoodMoreListView?
+    private var eatingView:FoodMoreListView?
+    private var diyCourseView:FoodMoreListView?
+    private var diyCookingView:FoodMoreListView?
+    private var moivingView:FoodMoreListView?
+    var foodMoreListViewsArray:[FoodMoreListView?]?
+    lazy var titleLabelArray = Array<UILabel>()
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-        
-        createFoodSujectListView()
         createTitleScrollView()
+        createFoodSujectListView()
         downloadScrollViewData()
         downloadFoodListData()
     }
     func createFoodSujectListView(){
-        let scrollView = UIScrollView()
-        view.addSubview(scrollView)
-        scrollView.snp_makeConstraints {
+        contentScrollView.delegate = self
+        view.addSubview(contentScrollView)
+        contentScrollView.snp_makeConstraints {
             [weak self]
             (make) in
             make.edges.equalTo(self!.view).inset(UIEdgeInsetsMake(64+20, 0, 49, 0))
         }
         let containerView = UIView.createUIView()
-        scrollView.addSubview(containerView)
+        contentScrollView.addSubview(containerView)
         containerView.snp_makeConstraints { (make) in
-            make.edges.equalTo(scrollView)
-            make.height.equalTo(scrollView)
+            make.edges.equalTo(contentScrollView)
+            make.height.equalTo(contentScrollView)
         }
         foodSujectListView = FoodSubjectListView()
         containerView.addSubview(foodSujectListView!)
@@ -47,14 +54,37 @@ class FoodSubjectViewController: BaseViewController {
             make.width.equalTo(kScreenWidth)
             make.left.equalTo(containerView)
         })
-        containerView.snp_makeConstraints { (make) in
-            make.right.equalTo(foodSujectListView!)
-        }
         foodSujectListView?.tbView!.headerView = XWRefreshNormalHeader(target: self, action: #selector(firstPageAction))
         foodSujectListView?.tbView!.footerView = XWRefreshAutoNormalFooter(target: self, action: #selector(refreshAction))
         
+        let viewsArray = [shoppingView,courseView,tourView,eatingView,diyCourseView,diyCookingView,moivingView]
+        foodMoreListViewsArray = viewsArray
+        var lastView:UIView = foodSujectListView!
+        for i in 0..<titleScrollViewArray.count-1{
+            var view = viewsArray[i]
+            view = FoodMoreListView()
+            view?.downloadFoodMoreListData(12+i, limit: 20, offset: 0)
+            containerView.addSubview(view!)
+            view?.snp_makeConstraints(closure: { (make) in
+                make.top.bottom.equalTo(containerView)
+                make.width.equalTo(kScreenWidth)
+                make.left.equalTo((lastView.snp_right))
+            })
+            lastView = view!
+        }
+        containerView.snp_makeConstraints { (make) in
+            make.right.equalTo(lastView)
+        }
+        contentScrollView.pagingEnabled = true
+        contentScrollView.showsHorizontalScrollIndicator = false
         
-        
+        foodSujectListView?.convertIdClosure = {
+            [weak self]
+            id in
+            let detailCtrl = FoodDetailViewController()
+            detailCtrl.id = id
+            self!.navigationController?.pushViewController(detailCtrl, animated: true)
+        }
     }
     
     func createTitleScrollView(){
@@ -83,6 +113,7 @@ class FoodSubjectViewController: BaseViewController {
         for i in 0..<titleScrollViewArray.count{
             let label = UILabel.createLabel(titleScrollViewArray[i] as? String, font: UIFont.systemFontOfSize(13), textAlignment: .Center, textColor: UIColor.blackColor())
             containerView.addSubview(label)
+            titleLabelArray.append(label)
             label.snp_makeConstraints(closure: { (make) in
                 make.top.bottom.equalTo(containerView)
                 make.width.equalTo(80)
@@ -105,17 +136,6 @@ class FoodSubjectViewController: BaseViewController {
         containerView.snp_makeConstraints { (make) in
             make.right.equalTo((lastLabel?.snp_right)!)
         }
-        
-        let moreBtn = UIButton.createBtn(nil, bgImageName: "jiantou", selectBgImageName: nil, target: self, action: #selector(moreAction(_:)))
-        view.addSubview(moreBtn)
-        moreBtn.snp_makeConstraints {
-            [weak self]
-            (make) in
-            make.right.equalTo(self!.view)
-            make.top.equalTo((self?.view.snp_top)!).offset(64)
-            make.width.equalTo(30)
-            make.height.equalTo(30)
-        }
     }
     func tapAction(g:UITapGestureRecognizer){
         for subView in (g.view?.superview?.subviews)!{
@@ -127,21 +147,14 @@ class FoodSubjectViewController: BaseViewController {
         let index = (g.view?.tag)! - 500
         let label = g.view as! UILabel
         label.textColor = UIColor.greenColor()
-        if index == 0{
-            
-        }else if index == 1{
-            
-        }
-    }
-    
-    func moreAction(btn:UIButton){
-        UIView.beginAnimations("animate1", context: nil)
+        UIView.beginAnimations("animate", context: nil)
         UIView.setAnimationDuration(0.5)
         UIView.setAnimationRepeatCount(1)
         UIView.setAnimationDelegate(self)
-        btn.transform = CGAffineTransformMakeRotation(3.1415926)
+        self.contentScrollView.contentOffset = CGPointMake(kScreenWidth*CGFloat(index), 0)
         UIView.commitAnimations()
     }
+    
     func firstPageAction(){
         limit = 20
         offset = 0
@@ -187,7 +200,6 @@ class FoodSubjectViewController: BaseViewController {
     
     func downloadFoodListData(){
         let downloader = MyDownloader()
-        //http://api.guozhoumoapp.com/v1/channels/2/items?gender=1&generation=0&limit=20&offset=0
         let url = String(format: FSFoodListUrl,gender,generation,limit,offset)
         downloader.downloadWithUrlString(url)
         downloader.didFailWithError = {
@@ -235,4 +247,33 @@ class FoodSubjectViewController: BaseViewController {
     }
     */
 
+
 }
+
+extension FoodSubjectViewController:UIScrollViewDelegate{
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView) {
+        let contView = scrollView.subviews.last
+        let index = Int((contView?.frame.origin.x)!/kScreenWidth)
+        for i in 0..<titleLabelArray.count{
+            let label = titleLabelArray[i]
+            label.textColor = UIColor.blackColor()
+            if label.tag - 500 == index{
+                label.textColor = UIColor.greenColor()
+            }
+            UIView.beginAnimations("animate", context: nil)
+            UIView.setAnimationDuration(0.5)
+            UIView.setAnimationRepeatCount(1)
+            UIView.setAnimationDelegate(self)
+            if index == 1 || index == 2{
+                titleScrollView?.contentOffset = CGPointMake(0, 0)
+            }else if index == 3 || index == 4 || index == 5 || index == 6{
+                titleScrollView?.contentOffset = CGPointMake(CGFloat(35)*CGFloat(index), 0)
+            }else if index == 7{
+                titleScrollView?.contentOffset = CGPointMake(CGFloat(40)*7, 0)
+            }
+            UIView.commitAnimations()
+        }
+    }
+}
+
+

@@ -14,8 +14,8 @@ public let kScreenHeight = UIScreen.mainScreen().bounds.height
 public let FSScrollViewUrl = "http://api.guozhoumoapp.com/v1/banners?channel=iOS"
 public let FSScrollViewListlUrl = "http://api.guozhoumoapp.com/v1/collections/%d/posts?gender=%d&generation=%d&limit=%d&offset=%d"
 public let FSFoodListUrl = "http://api.guozhoumoapp.com/v1/channels/2/items?gender=%d&generation=%d&limit=%d&offset=%d"
-public let FSFoodMoreListUrl = "http://api.guozhoumoapp.com/v1/channels/14/items?limit=20&offset=0"//12---15
-
+public let FSFoodMoreListUrl = "http://api.guozhoumoapp.com/v1/channels/%d/items?limit=%d&offset=%d"
+public let FSFoodDetailUrl = "http://api.guozhoumoapp.com/v1/posts/%@"
 
 
 public let FLFoodListUrl = "http://api.guozhoumoapp.com/v2/items?gender=%d&generation=%d&limit=%d&offset=%d"

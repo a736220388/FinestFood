@@ -9,6 +9,67 @@
 import UIKit
 
 class FoodMoreListView: UIView {
+    private var tbView:UITableView?
+    var dataArray:Array<FSFoodMoreListModel>?{
+        didSet{
+            tbView!.reloadData()
+        }
+    }
+    init(){
+        super.init(frame: CGRectZero)
+        tbView = UITableView()
+        tbView?.delegate = self
+        tbView?.dataSource = self
+        addSubview(tbView!)
+        tbView?.snp_makeConstraints(closure: { (make) in
+            make.edges.equalTo(self)
+        })
+    }
     
-
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func downloadFoodMoreListData(typeValue:Int,limit:Int,offset:Int){
+        let downloader = MyDownloader()
+        let url = String(format: FSFoodMoreListUrl,typeValue,limit,offset)
+        downloader.downloadWithUrlString(url)
+        downloader.didFailWithError = {
+            error in
+            print(error)
+        }
+        downloader.didFinishWithData = {
+            data in
+            let jsonData = try! NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers)
+            if jsonData.isKindOfClass(NSDictionary.self){
+                let dataDict = jsonData["data"] as! NSDictionary
+                let itemsArray = dataDict["items"] as! Array<Dictionary<String,AnyObject>>
+                var dataArr = Array<FSFoodMoreListModel>()
+                for dict in itemsArray{
+                    let model = FSFoodMoreListModel()
+                    model.setValuesForKeysWithDictionary(dict)
+                    dataArr.append(model)
+                }
+                dispatch_async(dispatch_get_main_queue(), {
+                    self.dataArray = dataArr
+                })
+            }
+        }
+    }
+}
+extension FoodMoreListView:UITableViewDelegate,UITableViewDataSource{
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if dataArray == nil {
+            return 0
+        }
+        return (dataArray?.count)!
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let model = dataArray![indexPath.row]
+        let cell = FoodMoreListCell.createFoodMoreListCellFor(tableView, atIndexPath: indexPath, withModel: model)
+        return cell
+    }
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 200
+    }
 }

@@ -17,3 +17,13 @@ public enum FoodListType:Int{
     case DIYCooking = 17
     case Moiving = 18
 }
+class Util: NSObject {
+    class func animationWith(view:UIView){
+        UIView.beginAnimations("animate", context: nil)
+        UIView.setAnimationDuration(1)
+        UIView.setAnimationRepeatCount(1)
+        UIView.setAnimationDelegate(self)
+        
+        UIView.commitAnimations()
+    }
+}

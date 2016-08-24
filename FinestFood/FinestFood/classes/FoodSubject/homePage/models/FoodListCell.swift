@@ -10,7 +10,10 @@ import UIKit
 
 class FoodListCell: UITableViewCell {
 
-    @IBOutlet weak var mainImageView: UIImageView!
+
+    @IBOutlet weak var mainBtn: UIButton!
+    @IBAction func mainBtnAction(sender: UIButton) {
+    }
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var starsView: UIView!
@@ -23,9 +26,9 @@ class FoodListCell: UITableViewCell {
     }
     func showData(){
         let url = NSURL(string: foodListModel!.cover_image_url!)
-        mainImageView.kf_setImageWithURL(url)
-        mainImageView.layer.cornerRadius = 5
-        mainImageView.clipsToBounds = true
+        mainBtn.kf_setBackgroundImageWithURL(url, forState: .Normal, placeholderImage: UIImage(named: "sdefaultImage"), optionsInfo: nil, progressBlock: nil, completionHandler: nil)
+        mainBtn.layer.cornerRadius = 5
+        mainBtn.clipsToBounds = true
         let time = Int(foodListModel!.updated_at!)
         let timeUpdate = NSDate(timeIntervalSince1970: Double(time))
         var timeStr = "\(timeUpdate)"
