@@ -36,6 +36,10 @@ public let CGSubjectUrl = "http://api.guozhoumoapp.com/v1/collections?limit=%d&o
 public let MineLoginUrl = "http://api.guozhoumoapp.com/v1/account/signin"
 //postBody:mobile=18550217023&password=123456
 
+//登陆后获取用户信息
+public let UserInfoPostUrl = "http://api.guozhoumoapp.com/v1/users/me/post_likes?limit==%d&offset=%d"
+public let UserInfoListUrl = "http://api.guozhoumoapp.com/v1/users/me/favorite_lists?limit==%d&offset=%d"
+
 //注册
 public let MineRegisterUrl = "http://api.guozhoumoapp.com/v1/account/mobile_exist"
 //post:mobile=18550217032

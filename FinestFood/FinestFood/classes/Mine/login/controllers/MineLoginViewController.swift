@@ -88,21 +88,6 @@ class MineLoginViewController: HomeTarbarViewController {
                             Util.showAlertWithOK(self!, msg: "手机号码或者密码输入错误!", completeClosure: nil)
                         })
                     }else if (dict["code"] as! NSNumber) == 200{
-                        /*登录成功后返回的数据:
-                         {
-                         "code": 200,
-                         "data": {
-                         "avatar_url": "",
-                         "can_mobile_login": true,
-                         "guest_uuid": null,
-                         "id": 5008184,
-                         "mobile": "18550217032", 
-                         "nickname": "18550217032", 
-                         "role": 0
-                         }, 
-                         "message": "OK"
-                         }
-                         */
                         let dataDict = dict["data"] as! Dictionary<String,AnyObject>
                         let userInfoModel = UserInfoModel()
                         userInfoModel.setValuesForKeysWithDictionary(dataDict)
