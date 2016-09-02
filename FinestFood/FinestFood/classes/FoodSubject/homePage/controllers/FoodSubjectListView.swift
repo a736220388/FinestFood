@@ -10,7 +10,7 @@ import UIKit
 
 class FoodSubjectListView: UIView {
     var tbView:UITableView?
-    var convertIdClosure:((NSNumber)->Void)?
+    var convertIdClosure:((NSNumber,String)->Void)?
     var scrollViewArray:NSMutableArray?{
         didSet{
             self.tbView?.reloadData()
@@ -68,7 +68,7 @@ extension FoodSubjectListView:UITableViewDelegate,UITableViewDataSource{
         var cell = UITableViewCell()
         if indexPath.section == 0{
             if scrollViewArray?.count > 0{
-                cell = FSAdCell.createAdCell(tableView, atIndexPath: indexPath, withDataArray: scrollViewArray!)
+                cell = FSAdCell.createAdCell(tableView, atIndexPath: indexPath, withDataArray: scrollViewArray!,closure:self.convertIdClosure)
             }
         }else{
             if scrollViewArray?.count > 0{
@@ -82,19 +82,10 @@ extension FoodSubjectListView:UITableViewDelegate,UITableViewDataSource{
     }
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 0{
-            let cell = tableView.cellForRowAtIndexPath(indexPath)
-            if cell?.isKindOfClass(FSAdCell.self)==true{
-                for subView in cell!.contentView.subviews{
-                    if subView.isKindOfClass(UIScrollView.self) == true{
-                        let scrollView = subView as! UIScrollView
-                        let index = Int(scrollView.contentOffset.x / scrollView.bounds.size.width)
-                        print("index=====\(index)")
-                    }
-                }
-            }
+            
         }else{
             let model = foodListArray![indexPath.section - 1] as! FSFoodListModel
-            convertIdClosure!(model.id!)
+            convertIdClosure!(model.id!,"CELL")
         }
     }
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {

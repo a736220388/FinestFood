@@ -9,7 +9,7 @@
 import UIKit
 import XWSwiftRefresh
 
-class FoodListViewController: BaseViewController {
+class FoodListViewController: HomeTarbarViewController {
     
     lazy var dataArray = NSMutableArray()
     private var collView:UICollectionView?
@@ -18,7 +18,12 @@ class FoodListViewController: BaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        title = "单品"
+        navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: #selector(searchAction))
         createCollView()
+    }
+    func searchAction(){
+        
     }
     func createCollView(){
         automaticallyAdjustsScrollViewInsets = false
@@ -36,7 +41,6 @@ class FoodListViewController: BaseViewController {
         collView?.snp_makeConstraints(closure: {
             [weak self]
             (make) in
-            //make.edges.equalTo((self?.view)!)
             make.top.equalTo((self?.view.snp_top)!).offset(64)
             make.right.left.equalTo((self?.view)!)
             make.bottom.equalTo((self?.view.snp_bottom)!).offset(-49)
@@ -117,5 +121,12 @@ extension FoodListViewController:UICollectionViewDelegate,UICollectionViewDataSo
         let model = dataArray[indexPath.item] as! FoodListItemModel
         cell?.configModel(model)
         return cell!
+    }
+    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let model = dataArray[indexPath.item] as! FoodListItemModel
+        let detailCtrl = FoodListDetailViewController()
+        detailCtrl.itemId = Int(model.id!)
+        detailCtrl.detailModel = model
+        navigationController?.pushViewController(detailCtrl, animated: true)
     }
 }

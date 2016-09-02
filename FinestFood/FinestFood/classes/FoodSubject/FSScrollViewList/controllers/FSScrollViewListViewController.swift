@@ -9,13 +9,28 @@
 import UIKit
 
 class FSScrollViewListViewController: BaseViewController {
-    
+    var convertListIdClosure:((NSNumber)->Void)?
     var targetId:Int?
-
+    var tbView:UITableView?
+    var dataArray:Array<FSFoodMoreListModel>?{
+        didSet{
+            tbView!.reloadData()
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        view.backgroundColor = UIColor.redColor()
+        tbView = UITableView()
+        tbView?.delegate = self
+        tbView?.dataSource = self
+        view.addSubview(tbView!)
+        tbView?.snp_makeConstraints(closure: {
+            [weak self]
+            (make) in
+            make.edges.equalTo(self!.view)
+        })
     }
     override func downloadData() {
         let url = String(format: FSScrollViewListlUrl, targetId!,gender,generation,limit,offset)
@@ -26,9 +41,22 @@ class FSScrollViewListViewController: BaseViewController {
             print(error)
         }
         downloader.didFinishWithData = {
+            [weak self]
             data in
             let jsonData = try! NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers)
-            print(jsonData)
+            if jsonData.isKindOfClass(NSDictionary.self){
+                let dataDict = jsonData["data"] as! NSDictionary
+                let itemsArray = dataDict["posts"] as! Array<Dictionary<String,AnyObject>>
+                var dataArr = Array<FSFoodMoreListModel>()
+                for dict in itemsArray{
+                    let model = FSFoodMoreListModel()
+                    model.setValuesForKeysWithDictionary(dict)
+                    dataArr.append(model)
+                }
+                dispatch_async(dispatch_get_main_queue(), {
+                    self!.dataArray = dataArr
+                })
+            }
         }
     }
 
@@ -49,3 +77,28 @@ class FSScrollViewListViewController: BaseViewController {
     */
 
 }
+extension FSScrollViewListViewController:UITableViewDelegate,UITableViewDataSource{
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        if dataArray == nil {
+            return 0
+        }
+        return (dataArray?.count)!
+    }
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let model = dataArray![indexPath.row]
+        let cell = FoodMoreListCell.createFoodMoreListCellFor(tableView, atIndexPath: indexPath, withModel: model)
+        cell.selectionStyle = .None
+        return cell
+    }
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 200
+    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let model = dataArray![indexPath.row]
+        let foodDetailCtrl = FoodDetailViewController()
+        foodDetailCtrl.id = Int(model.id!)
+        self.navigationController?.pushViewController(foodDetailCtrl, animated: true)
+        
+    }
+}
+

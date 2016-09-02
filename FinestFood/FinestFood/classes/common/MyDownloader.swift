@@ -30,4 +30,25 @@ class MyDownloader: NSObject {
         }
         task.resume()
     }
+    func downloadWithPostUrlString(urlString:String,paramString:String){
+        let url = NSURL(string: urlString)
+        let request = NSMutableURLRequest(URL: url!)
+        let data = paramString.dataUsingEncoding(NSUTF8StringEncoding)
+        request.HTTPBody = data
+        request.HTTPMethod = "POST"
+        let session = NSURLSession.sharedSession()
+        let task = session.dataTaskWithRequest(request) { (data, response, error) in
+            if error != nil{
+                self.didFailWithError!(error!)
+            }else{
+                let httpRes = response as! NSHTTPURLResponse
+                if httpRes.statusCode == 200{
+                    self.didFinishWithData!(data!)
+                }else{
+                    self.didFinishWithData!(data!)
+                }
+            }
+        }
+        task.resume()
+    }
 }

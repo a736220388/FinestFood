@@ -8,7 +8,7 @@
 
 import UIKit
 import XWSwiftRefresh
-class FoodSubjectViewController: BaseViewController {
+class FoodSubjectViewController: HomeTarbarViewController {
     
     lazy var scrollViewArray = NSMutableArray()
     lazy var titleScrollViewArray = NSMutableArray()
@@ -28,10 +28,16 @@ class FoodSubjectViewController: BaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "食不厌精"
+        navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: #selector(searchAction))
         createTitleScrollView()
         createFoodSujectListView()
         downloadScrollViewData()
         downloadFoodListData()
+    }
+    func searchAction(){
+        let searchCtrl = FSSearchViewController()
+        self.navigationController?.pushViewController(searchCtrl, animated: true)
     }
     func createFoodSujectListView(){
         contentScrollView.delegate = self
@@ -39,7 +45,7 @@ class FoodSubjectViewController: BaseViewController {
         contentScrollView.snp_makeConstraints {
             [weak self]
             (make) in
-            make.edges.equalTo(self!.view).inset(UIEdgeInsetsMake(64+20, 0, 49, 0))
+            make.edges.equalTo(self!.view).inset(UIEdgeInsetsMake(64+40, 0, 49, 0))
         }
         let containerView = UIView.createUIView()
         contentScrollView.addSubview(containerView)
@@ -71,6 +77,12 @@ class FoodSubjectViewController: BaseViewController {
                 make.left.equalTo((lastView.snp_right))
             })
             lastView = view!
+            view?.convertListIdClosure = {
+                id in
+                let detailCtrl = FoodDetailViewController()
+                detailCtrl.id = Int(id)
+                self.navigationController?.pushViewController(detailCtrl, animated: true)
+            }
         }
         containerView.snp_makeConstraints { (make) in
             make.right.equalTo(lastView)
@@ -80,11 +92,20 @@ class FoodSubjectViewController: BaseViewController {
         
         foodSujectListView?.convertIdClosure = {
             [weak self]
-            id in
-            let detailCtrl = FoodDetailViewController()
-            detailCtrl.id = id
-            self!.navigationController?.pushViewController(detailCtrl, animated: true)
+            id,type in
+            if type == "CELL"{
+                let detailCtrl = FoodDetailViewController()
+                detailCtrl.id = Int(id)
+                self!.navigationController?.pushViewController(detailCtrl, animated: true)
+            }else if type == "AD"{
+                let scrollViewListCtrl = FSScrollViewListViewController()
+                scrollViewListCtrl.targetId = Int(id)
+                self!.navigationController?.pushViewController(scrollViewListCtrl, animated: true)
+                
+            }
+            
         }
+        
     }
     
     func createTitleScrollView(){
@@ -98,7 +119,7 @@ class FoodSubjectViewController: BaseViewController {
             [weak self]
             (make) in
             make.left.right.equalTo(self!.view)
-            make.height.equalTo(20)
+            make.height.equalTo(40)
             make.top.equalTo(self!.view.snp_top).offset(64)
         })
         let containerView = UIView.createUIView()
@@ -111,7 +132,7 @@ class FoodSubjectViewController: BaseViewController {
         }
         var lastLabel:UILabel? = nil
         for i in 0..<titleScrollViewArray.count{
-            let label = UILabel.createLabel(titleScrollViewArray[i] as? String, font: UIFont.systemFontOfSize(13), textAlignment: .Center, textColor: UIColor.blackColor())
+            let label = UILabel.createLabel(titleScrollViewArray[i] as? String, font: UIFont.systemFontOfSize(17), textAlignment: .Center, textColor: UIColor.blackColor())
             containerView.addSubview(label)
             titleLabelArray.append(label)
             label.snp_makeConstraints(closure: { (make) in
@@ -151,6 +172,13 @@ class FoodSubjectViewController: BaseViewController {
         UIView.setAnimationDuration(0.5)
         UIView.setAnimationRepeatCount(1)
         UIView.setAnimationDelegate(self)
+        if index == 1 || index == 2{
+            titleScrollView?.contentOffset = CGPointMake(0, 0)
+        }else if index == 3 || index == 4 || index == 5 || index == 6{
+            titleScrollView?.contentOffset = CGPointMake(CGFloat(40)*CGFloat(index), 0)
+        }else if index == 7{
+            titleScrollView?.contentOffset = CGPointMake(CGFloat(40)*7, 0)
+        }
         self.contentScrollView.contentOffset = CGPointMake(kScreenWidth*CGFloat(index), 0)
         UIView.commitAnimations()
     }

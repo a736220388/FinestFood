@@ -51,9 +51,9 @@
                         </connections>
                     </button>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="登录" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ghY-y6-gHH">
-                        <rect key="frame" x="157" y="130" width="60" height="20"/>
+                        <rect key="frame" x="127" y="130" width="120" height="20"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="60" id="dVN-X4-5Ed"/>
+                            <constraint firstAttribute="width" constant="120" id="dVN-X4-5Ed"/>
                             <constraint firstAttribute="height" constant="20" id="eQh-sm-DaF"/>
                         </constraints>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -76,6 +76,9 @@
                     <constraint firstItem="T0t-1g-aS1" firstAttribute="centerX" secondItem="QGI-d0-hXn" secondAttribute="centerX" id="i7q-GR-ene"/>
                 </constraints>
             </tableViewCellContentView>
+            <connections>
+                <outlet property="userPhoneLabel" destination="ghY-y6-gHH" id="GrR-Fj-0CE"/>
+            </connections>
             <point key="canvasLocation" x="293.5" y="187"/>
         </tableViewCell>
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="mineListCellId" id="JC0-dT-2Eb" customClass="MineProfileCell" customModule="FinestFood" customModuleProvider="target">

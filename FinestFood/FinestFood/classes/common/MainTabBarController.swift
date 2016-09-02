@@ -10,7 +10,7 @@ import UIKit
 
 class MainTabBarController: UITabBarController {
     
-    private var bgView:UIView?
+    var bgView:UIView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +18,7 @@ class MainTabBarController: UITabBarController {
         // Do any additional setup after loading the view.
         createViewControllers()
         createTabBar()
+        tabBar.hidden = true
     }
     func createViewControllers(){
         let ctrlNames = ["FoodSubjectViewController","FoodListViewController","CategoryViewController","MoreViewController","MineViewController"]

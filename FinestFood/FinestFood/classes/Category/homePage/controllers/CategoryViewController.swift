@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CategoryViewController: BaseViewController {
+class CategoryViewController: HomeTarbarViewController {
 
     lazy var subjectsArray = NSMutableArray()
     lazy var homeOutArray = NSMutableArray()
@@ -19,6 +19,11 @@ class CategoryViewController: BaseViewController {
         // Do any additional setup after loading the view.
         createTableView()
         downloadHomeOutData()
+        title = "分类"
+        navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: #selector(searchAction))
+    }
+    func searchAction(){
+        
     }
     func createTableView(){
         automaticallyAdjustsScrollViewInsets = false
@@ -72,7 +77,7 @@ class CategoryViewController: BaseViewController {
     }
     override func downloadData() {
         let downloader = MyDownloader()
-        downloader.downloadWithUrlString(CGSubjectUrl)
+        downloader.downloadWithUrlString(String(format: CGSubjectUrl,limit,offset))
         downloader.didFailWithError = {
             error in
             print(error)
@@ -146,6 +151,7 @@ extension CategoryViewController:UITableViewDelegate,UITableViewDataSource{
                 cell?.configModel(self.subjectsArray)
             }
             cell?.selectionStyle = .None
+            cell?.delegate = self
             return cell!
         }else if indexPath.section == 1{
             let cellId = "homeCellId"
@@ -158,6 +164,7 @@ extension CategoryViewController:UITableViewDelegate,UITableViewDataSource{
                 cell?.configModel(model.channels!, section: indexPath.section)
             }
             cell?.selectionStyle = .None
+            cell?.delegate = self
             return cell!
         }else if indexPath.section == 2{
             let cellId = "homeCellId"
@@ -169,9 +176,24 @@ extension CategoryViewController:UITableViewDelegate,UITableViewDataSource{
                 let model = homeOutArray[1] as! CGChannelModel
                 cell?.configModel(model.channels!, section: indexPath.section)
             }
+            cell?.delegate = self
             cell?.selectionStyle = .None
             return cell!
         }
         return UITableViewCell()
+    }
+}
+extension CategoryViewController:CGHomeOutCellDelegate{
+    func convertSelectedModel(model: CGHomeOutModel) {
+        let listCtrl = CGListViewController()
+        listCtrl.typeValue = Int(model.id!)
+        self.navigationController?.pushViewController(listCtrl, animated: true)
+    }
+}
+extension CategoryViewController:CGSubjectCellDelegate{
+    func convertValueWithModel(model: CGCollectionsModel) {
+        let listCtrl = CGListViewController()
+        listCtrl.typeValue = Int(model.id!)
+        self.navigationController?.pushViewController(listCtrl, animated: true)
     }
 }

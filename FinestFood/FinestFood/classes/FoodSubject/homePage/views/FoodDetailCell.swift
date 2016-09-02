@@ -10,8 +10,8 @@ import UIKit
 
 class FoodDetailCell: UITableViewCell {
 
-    @IBOutlet weak var bgImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
+
+    @IBOutlet weak var superView: UIView!
     @IBOutlet weak var webView: UIWebView!
     @IBAction func likeBtn(sender: UIButton) {
     }
@@ -23,19 +23,19 @@ class FoodDetailCell: UITableViewCell {
     @IBOutlet weak var likeLabel: UILabel!
     @IBOutlet weak var commentLabel: UILabel!
     @IBOutlet weak var shareLabel: UILabel!
+    
+    var lastContentOffsetY:CGFloat? = nil
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
     func configModel(model:FoodDetailModel){
-        let url = NSURL(string: model.cover_image_url!)
-        bgImageView.kf_setImageWithURL(url, placeholderImage: UIImage(named: "sdefaultImage"), optionsInfo: nil, progressBlock: nil, completionHandler: nil)
-        titleLabel.text = model.title
         let webUrl = NSURL(string: model.url!)
         let request = NSURLRequest(URL: webUrl!)
         webView.loadRequest(request)
-
+        webView.scrollView.delegate = self
         likeLabel.text = "\(model.likes_count!)人喜欢"
         commentLabel.text = "\(model.comments_count!)次分享"
         shareLabel.text = "\(model.shares_count!)条评论"
@@ -47,4 +47,16 @@ class FoodDetailCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+}
+extension FoodDetailCell:UIScrollViewDelegate{
+//    func scrollViewDidScroll(scrollView: UIScrollView) {
+//        if lastContentOffsetY != nil{
+//            if lastContentOffsetY < webView.scrollView.contentOffset.y{
+//                superView.hidden = true
+//            }else{
+//                superView.hidden = false
+//            }
+//        }
+//        lastContentOffsetY = webView.scrollView.contentOffset.y
+//    }
 }

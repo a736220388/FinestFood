@@ -26,6 +26,7 @@ class FoodListCell: UITableViewCell {
     }
     func showData(){
         let url = NSURL(string: foodListModel!.cover_image_url!)
+        mainBtn.userInteractionEnabled = false
         mainBtn.kf_setBackgroundImageWithURL(url, forState: .Normal, placeholderImage: UIImage(named: "sdefaultImage"), optionsInfo: nil, progressBlock: nil, completionHandler: nil)
         mainBtn.layer.cornerRadius = 5
         mainBtn.clipsToBounds = true
@@ -38,7 +39,7 @@ class FoodListCell: UITableViewCell {
         var day = arr[2]
         var week = ""
         if arr.count == 3{
-            week = CaculateWeekDay(tmpStr)
+            week = Util.CaculateWeekDay(tmpStr)
             if arr[1].substringToIndex(arr[1].startIndex.successor()) == "0"{
                 month = arr[1].substringFromIndex(arr[1].endIndex.predecessor())
             }
@@ -78,32 +79,6 @@ class FoodListCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-}
-func CaculateWeekDay(dateStr:String) ->String{
-    let dateArr = dateStr.componentsSeparatedByString("-")
-    if dateArr.count == 3{
-        var y = Int(dateArr[0])!
-        var m = Int(dateArr[1])!
-        let d = Int(dateArr[2])!
-        if m == 1 || m == 2{
-            m += 12
-            y -= 1
-        }
-        let iWeek = (d+2*m+3*(m+1)/5+y+y/4-y/100+y/400)%7
-        switch iWeek{
-            case 0: return "星期一"
-            case 1: return "星期二"
-            case 2: return "星期三"
-            case 3: return "星期四"
-            case 4: return "星期五"
-            case 5: return "星期六"
-            case 6: return "星期天"
-            default:
-                return ""
-        }
-    }else{
-        return "星期未知"
-    }
 }
 
 

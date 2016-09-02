@@ -9,6 +9,7 @@
 import UIKit
 
 class FoodMoreListView: UIView {
+    var convertListIdClosure:((NSNumber)->Void)?
     private var tbView:UITableView?
     var dataArray:Array<FSFoodMoreListModel>?{
         didSet{
@@ -21,8 +22,10 @@ class FoodMoreListView: UIView {
         tbView?.delegate = self
         tbView?.dataSource = self
         addSubview(tbView!)
-        tbView?.snp_makeConstraints(closure: { (make) in
-            make.edges.equalTo(self)
+        tbView?.snp_makeConstraints(closure: {
+            [weak self]
+            (make) in
+            make.edges.equalTo(self!)
         })
     }
     
@@ -39,6 +42,7 @@ class FoodMoreListView: UIView {
             print(error)
         }
         downloader.didFinishWithData = {
+            [weak self]
             data in
             let jsonData = try! NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers)
             if jsonData.isKindOfClass(NSDictionary.self){
@@ -51,7 +55,7 @@ class FoodMoreListView: UIView {
                     dataArr.append(model)
                 }
                 dispatch_async(dispatch_get_main_queue(), {
-                    self.dataArray = dataArr
+                    self!.dataArray = dataArr
                 })
             }
         }
@@ -67,9 +71,14 @@ extension FoodMoreListView:UITableViewDelegate,UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let model = dataArray![indexPath.row]
         let cell = FoodMoreListCell.createFoodMoreListCellFor(tableView, atIndexPath: indexPath, withModel: model)
+        cell.selectionStyle = .None
         return cell
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         return 200
+    }
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let model = dataArray![indexPath.row]
+        convertListIdClosure!(model.id!)
     }
 }

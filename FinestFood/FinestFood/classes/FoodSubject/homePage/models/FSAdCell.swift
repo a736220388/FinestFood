@@ -15,6 +15,7 @@ class FSAdCell: UITableViewCell {
     
     var lastIndex:Int?
     var timer:NSTimer?
+    var convertValueClosure:((NSNumber,String)->Void)?
     
     var scrollViewArray:NSMutableArray?{
         didSet{
@@ -73,7 +74,9 @@ class FSAdCell: UITableViewCell {
     }
     func tapAction(){
         let index = Int(scrollView.contentOffset.x / scrollView.bounds.size.width)
-        print(index)
+        let model = scrollViewArray![index] as! FSScrollViewDataModel
+        
+        self.convertValueClosure!(model.target_id!,"AD")
     }
     func timerAction(){
         UIView.beginAnimations("animate1", context: nil)
@@ -85,12 +88,13 @@ class FSAdCell: UITableViewCell {
         UIView.commitAnimations()
         
     }
-    class func createAdCell(tableView:UITableView,atIndexPath indexPath:NSIndexPath,withDataArray array:NSMutableArray)->FSAdCell{
+    class func createAdCell(tableView:UITableView,atIndexPath indexPath:NSIndexPath,withDataArray array:NSMutableArray,closure:((NSNumber,String)->Void)?)->FSAdCell{
         let cellId = "adCellId"
         var cell = tableView.dequeueReusableCellWithIdentifier(cellId) as? FSAdCell
         if cell == nil{
             cell = NSBundle.mainBundle().loadNibNamed("FSAdCell", owner: nil, options: nil).last as? FSAdCell
         }
+        cell?.convertValueClosure = closure
         cell?.scrollViewArray?.removeLastObject()
         cell?.scrollViewArray?.removeObjectAtIndex(0)
         cell?.scrollViewArray = array

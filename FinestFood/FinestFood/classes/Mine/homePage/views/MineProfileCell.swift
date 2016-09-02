@@ -8,21 +8,36 @@
 
 import UIKit
 
-class MineProfileCell: UITableViewCell {
+protocol MineProfileCellDelegate:NSObjectProtocol {
+    func convertBtnSelectedWith(btn:UIButton,withType type:String)
+}
 
+class MineProfileCell: UITableViewCell {
+    weak var delegate:MineProfileCellDelegate?
+    
+    @IBOutlet weak var userPhoneLabel: UILabel!
+    
     @IBAction func alertAction(sender: UIButton) {
     }
     @IBAction func steAction(sender: UIButton) {
+        delegate?.convertBtnSelectedWith(sender, withType: "setting")
     }
 
     @IBAction func loginAction(sender: UIButton) {
+        delegate?.convertBtnSelectedWith(sender, withType: "login")
     }
     
     
     @IBAction func likeProduct(sender: UIButton) {
+        delegate?.convertBtnSelectedWith(sender, withType: "likeProduct")
     }
     
     @IBAction func likeSubject(sender: UIButton) {
+        delegate?.convertBtnSelectedWith(sender, withType: "likeSubject")
+    }
+    
+    func configModel(model:UserInfoModel){
+        userPhoneLabel.text = model.nickname!
     }
     
     override func awakeFromNib() {

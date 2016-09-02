@@ -8,12 +8,18 @@
 
 import UIKit
 
-class MoreViewController: BaseViewController {
+class MoreViewController: HomeTarbarViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        title = "分类"
+        navigationController?.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: .Search, target: self, action: #selector(searchAction))
+    }
+    func searchAction(){
+        
     }
 
     override func didReceiveMemoryWarning() {

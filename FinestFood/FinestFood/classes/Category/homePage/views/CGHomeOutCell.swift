@@ -7,14 +7,19 @@
 //
 
 import UIKit
+protocol CGHomeOutCellDelegate:NSObjectProtocol {
+    func convertSelectedModel(model:CGHomeOutModel)
+}
 
 class CGHomeOutCell: UITableViewCell {
-
+    var modelArray:[CGHomeOutModel]?
+    weak var delegate:CGHomeOutCellDelegate?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     func configModel(array:[CGHomeOutModel],section:Int){
+        modelArray = array
         let label = UILabel()
         self.contentView.addSubview(label)
         label.snp_makeConstraints { (make) in
@@ -41,13 +46,21 @@ class CGHomeOutCell: UITableViewCell {
                 make.top.equalTo(self.contentView.snp_top).offset(35 + width*colNum)
                 make.left.equalTo(self.contentView.snp_left).offset(10 + width*CGFloat(i % 4))
             })
+            customView.tag = 250+i
+            let g = UITapGestureRecognizer(target: self, action: #selector(tapAction(_:)))
+            customView.addGestureRecognizer(g)
         }
     }
-    
+    func tapAction(g:UITapGestureRecognizer){
+        let index = (g.view?.tag)! - 250
+        let model = modelArray![index]
+        delegate?.convertSelectedModel(model)
+    }
     
     func createCustomView(imageName:String,name:String)->UIView{
         let uiView = UIView.createUIView()
         let btn = UIButton()
+        btn.userInteractionEnabled = false
         uiView.addSubview(btn)
         btn.snp_makeConstraints { (make) in
             make.top.left.right.equalTo(uiView)

@@ -21,6 +21,7 @@ class FoodMoreListCell: UITableViewCell {
     
     var model:FSFoodMoreListModel?{
         didSet{
+            mainBtn.userInteractionEnabled = false
             let url = NSURL(string: model!.cover_image_url!)
             mainBtn.kf_setBackgroundImageWithURL(url, forState: .Normal, placeholderImage: UIImage(named: "sdefaultImage"), optionsInfo: nil, progressBlock: nil, completionHandler: nil)
             mainBtn.layer.cornerRadius = 5

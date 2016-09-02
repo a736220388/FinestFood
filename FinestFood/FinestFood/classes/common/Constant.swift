@@ -12,16 +12,61 @@ public let kScreenWidth = UIScreen.mainScreen().bounds.width
 public let kScreenHeight = UIScreen.mainScreen().bounds.height
 
 public let FSScrollViewUrl = "http://api.guozhoumoapp.com/v1/banners?channel=iOS"
+//专题集合(体验课...)
 public let FSScrollViewListlUrl = "http://api.guozhoumoapp.com/v1/collections/%d/posts?gender=%d&generation=%d&limit=%d&offset=%d"
+public let FSSearchWordUrl = "http://api.guozhoumoapp.com/v1/search/hot_words"
+public let FSSearchItemResultUrl = "http://api.guozhoumoapp.com/v1/search/item?keyword=%@&limit=%d&offset=%d&sort="
+public let FSSearchPostResultUrl = "http://api.guozhoumoapp.com/v1/search/post?keyword=%@&limit=%d&offset=%d&sort="
 public let FSFoodListUrl = "http://api.guozhoumoapp.com/v1/channels/2/items?gender=%d&generation=%d&limit=%d&offset=%d"
+//宅家
 public let FSFoodMoreListUrl = "http://api.guozhoumoapp.com/v1/channels/%d/items?limit=%d&offset=%d"
-public let FSFoodDetailUrl = "http://api.guozhoumoapp.com/v1/posts/%@"
+public let FSFoodDetailUrl = "http://api.guozhoumoapp.com/v1/posts/%d"
 
 
 public let FLFoodListUrl = "http://api.guozhoumoapp.com/v2/items?gender=%d&generation=%d&limit=%d&offset=%d"
+public let FLFoodDetailUrl = "http://api.guozhoumoapp.com/v2/items/%d/comments?limit=%d&offset=%d"//单品中商品的detail
+public let FLFoodSearchDetailUrl = "http://api.guozhoumoapp.com/v2/items/%d"//搜索中商品的detail
 
-public let CGSubjectUrl = "http://api.guozhoumoapp.com/v1/collections?limit=6&offset=0"
 public let CGHomeOutUrl = "http://api.guozhoumoapp.com/v1/channel_groups/all"
+//查看全部
+public let CGSubjectUrl = "http://api.guozhoumoapp.com/v1/collections?limit=%d&offset=%d"
+
+
+//登录
+public let MineLoginUrl = "http://api.guozhoumoapp.com/v1/account/signin"
+//postBody:mobile=18550217023&password=123456
+
+//注册
+public let MineRegisterUrl = "http://api.guozhoumoapp.com/v1/account/mobile_exist"
+//post:mobile=18550217032
+//{
+//        "code": 200,
+//        "data": {
+//            "exist": false
+//        },
+//        "message": "OK"
+//}
+
+
+//http://api.guozhoumoapp.com/v1/account/sms_token
+//    {
+//        "code": 200,
+//        "data": {
+//            "token": "xwg6e9f6z5"
+//        },
+//        "message": "OK"
+//}
+
+
+//http://api.guozhoumoapp.com/v1/account/send_verification_code
+//access_token=I7iUQTM%2Bbmpucs6rWeMAAMoCFx4%3D&mobile=18550217032
+//    {
+//        "code": 200,
+//        "data": {},
+//        "message": "OK"
+//}
+
+
 
 
 /*

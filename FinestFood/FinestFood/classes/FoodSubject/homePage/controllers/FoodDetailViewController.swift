@@ -10,7 +10,7 @@ import UIKit
 
 class FoodDetailViewController: BaseViewController {
     
-    var id:NSNumber?
+    var id:Int?
     var foodDetailModel:FoodDetailModel?
     private var tbView:UITableView?
 
@@ -80,11 +80,10 @@ extension FoodDetailViewController:UITableViewDelegate,UITableViewDataSource{
         return 1
     }
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cellId = "foodDetailWebCellId"
-        var cell = tableView.dequeueReusableCellWithIdentifier(cellId) as? FoodDetailWebCell
+        let cellId = "foodDetailCellId"
+        var cell = tableView.dequeueReusableCellWithIdentifier(cellId) as? FoodDetailCell
         if cell == nil{
-            //cell = NSBundle.mainBundle().loadNibNamed("FoodDetailCell", owner: nil, options: nil).last as? FoodDetailCell
-            cell = FoodDetailWebCell(style: .Default, reuseIdentifier: cellId)
+            cell = NSBundle.mainBundle().loadNibNamed("FoodDetailCell", owner: nil, options: nil).last as? FoodDetailCell
         }
         if let model = foodDetailModel{
             cell?.configModel(model)
@@ -92,6 +91,6 @@ extension FoodDetailViewController:UITableViewDelegate,UITableViewDataSource{
         return cell!
     }
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 667
+        return kScreenHeight - 40
     }
 }

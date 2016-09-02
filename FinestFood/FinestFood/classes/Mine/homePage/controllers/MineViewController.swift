@@ -8,9 +8,15 @@
 
 import UIKit
 
-class MineViewController: BaseViewController {
+class MineViewController: HomeTarbarViewController {
     
     private var tbView:UITableView?
+    
+    var userInfoModel: UserInfoModel?{
+        didSet{
+            tbView?.reloadData()
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -18,6 +24,11 @@ class MineViewController: BaseViewController {
         // Do any additional setup after loading the view.
         navigationController?.navigationBarHidden = true
         createTableView()
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.navigationBarHidden = true
+        tbView?.reloadData()
     }
     func createTableView(){
         tbView = UITableView(frame: CGRectMake(0, -20, kScreenWidth, kScreenHeight - 49 + 20), style: .Plain)
@@ -58,6 +69,11 @@ extension MineViewController:UITableViewDelegate,UITableViewDataSource{
                 cell = NSBundle.mainBundle().loadNibNamed("MineProfileCell", owner: nil, options: nil).first as? MineProfileCell
             }
             cell?.selectionStyle = .None
+            cell?.delegate = self
+            print(self.userInfoModel)
+            if (self.userInfoModel != nil) {
+                cell!.configModel(self.userInfoModel!)
+            }
             return cell!
         }else{
             let cellId = "mineListCellId"
@@ -66,6 +82,7 @@ extension MineViewController:UITableViewDelegate,UITableViewDataSource{
                 cell = NSBundle.mainBundle().loadNibNamed("MineProfileCell", owner: nil, options: nil).last as? MineProfileCell
             }
             cell?.selectionStyle = .None
+            cell?.delegate = self
             return cell!
         }
     }
@@ -80,5 +97,21 @@ extension MineViewController:UITableViewDelegate,UITableViewDataSource{
             return 20
         }
         return 0
+    }
+}
+extension MineViewController:MineProfileCellDelegate{
+    func convertBtnSelectedWith(btn: UIButton, withType type: String) {
+        if type == "setting"{
+            let mineSettingCtrl = MineSettingViewController()
+            self.navigationController?.pushViewController(mineSettingCtrl, animated: true)
+        }else if type == "login"{
+            let loginCtrl = MineLoginViewController()
+            self.navigationController?.pushViewController(loginCtrl, animated: true)
+            loginCtrl.convertUserInfoClosure = {
+                [weak self]
+                model in
+                self!.userInfoModel = model
+            }
+        }
     }
 }

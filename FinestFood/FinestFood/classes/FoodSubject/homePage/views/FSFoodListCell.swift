@@ -20,6 +20,7 @@ class FSFoodListCell: UICollectionViewCell {
     @IBOutlet weak var starsLabel: UILabel!
     
     func configModel(model:FoodListItemModel){
+        btn.userInteractionEnabled = false
         btn.backgroundColor = UIColor.whiteColor()
         btn.layer.cornerRadius = 10
         btn.clipsToBounds = true

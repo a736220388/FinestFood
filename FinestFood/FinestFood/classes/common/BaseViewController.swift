@@ -14,6 +14,7 @@ class BaseViewController: UIViewController {
     var generation = 0
     var limit = 20
     var offset = 0
+
     
     override func viewDidLoad() {
         super.viewDidLoad()

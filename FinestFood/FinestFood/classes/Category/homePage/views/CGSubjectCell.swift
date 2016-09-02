@@ -7,6 +7,9 @@
 //
 
 import UIKit
+protocol CGSubjectCellDelegate:NSObjectProtocol {
+    func convertValueWithModel(model:CGCollectionsModel)
+}
 
 class CGSubjectCell: UITableViewCell {
 
@@ -14,12 +17,17 @@ class CGSubjectCell: UITableViewCell {
 
     @IBAction func moreAction(sender: AnyObject) {
     }
+    
+    var modelArray:NSMutableArray?
+    var delegate:CGSubjectCellDelegate?
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
     
     func configModel(array:NSMutableArray){
+        modelArray = array
         for subView in scrollView.subviews{
             subView.removeFromSuperview()
         }
@@ -50,6 +58,11 @@ class CGSubjectCell: UITableViewCell {
                 make.width.equalTo(width)
             })
             lastImageView = imageView
+            let g = UITapGestureRecognizer(target: self, action: #selector(tapAction(_:)))
+            imageView.addGestureRecognizer(g)
+            imageView.tag = 350+i
+            imageView.userInteractionEnabled = true
+            containerView.userInteractionEnabled = true
         }
         containerView.snp_makeConstraints { (make) in
             make.right.equalTo(lastImageView!)
@@ -57,6 +70,11 @@ class CGSubjectCell: UITableViewCell {
         
         scrollView.contentSize = CGSizeMake(CGFloat(array.count * width), 0)
         scrollView.showsHorizontalScrollIndicator = false
+    }
+    func tapAction(g:UIGestureRecognizer){
+        let index = (g.view?.tag)! - 350
+        let model = modelArray![index] as! CGCollectionsModel
+        delegate?.convertValueWithModel(model)
     }
 
     override func setSelected(selected: Bool, animated: Bool) {

@@ -14,6 +14,7 @@ class FoodListItemModel: NSObject {
     var category_id:NSNumber?
     var cover_image_url:String?
     var created_at:NSNumber?
+    var desc:String?
     var editor_id:NSNumber?
     var favorites_count:NSNumber?
     var id:NSNumber?
@@ -30,7 +31,9 @@ class FoodListItemModel: NSObject {
     var updated_at:NSNumber?
     var url:String?
     override func setValue(value: AnyObject?, forUndefinedKey key: String) {
-        
+        if key == "description"{
+            self.desc = value as? String
+        }
     }
 }
 /*
